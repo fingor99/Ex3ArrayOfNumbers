@@ -98,6 +98,7 @@
             // 
             // textBoxInputArrayValue
             // 
+            this.textBoxInputArrayValue.Enabled = false;
             this.textBoxInputArrayValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBoxInputArrayValue.Location = new System.Drawing.Point(388, 69);
             this.textBoxInputArrayValue.Name = "textBoxInputArrayValue";
@@ -107,6 +108,7 @@
             // buttonInputIntoArray
             // 
             this.buttonInputIntoArray.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonInputIntoArray.Enabled = false;
             this.buttonInputIntoArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.buttonInputIntoArray.Location = new System.Drawing.Point(413, 120);
             this.buttonInputIntoArray.Name = "buttonInputIntoArray";
