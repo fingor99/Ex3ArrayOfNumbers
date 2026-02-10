@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Ex3ArrayOfNumbers
 {
-    public partial class Form1 : Form
+    public partial class FormArrayOfNumbers : Form
     {
-        public Form1()
+        public FormArrayOfNumbers()
         {
             InitializeComponent();
         }
