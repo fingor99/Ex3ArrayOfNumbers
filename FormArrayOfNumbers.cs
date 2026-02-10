@@ -12,9 +12,69 @@ namespace Ex3ArrayOfNumbers
 {
     public partial class FormArrayOfNumbers : Form
     {
+
+        bool arrayCounterReady = false;
+
+        private void showArrayValueCounter()
+        {
+            labelArrayAmountInput.Visible = true;
+            label1.Visible = true;
+            labelArrayCapacity.Visible = true;
+        }
+
+        private void hideArrayValueCounter()
+        {
+            labelArrayAmountInput.Visible = false;
+            label1.Visible = false;
+            labelArrayCapacity.Visible = false;
+        }
+
         public FormArrayOfNumbers()
         {
             InitializeComponent();
+        }
+
+        private void buttonSetArrayLength_Click(object sender, EventArgs e)
+        {
+            buttonResetArray.Visible = true;
+            buttonSetArrayLength.Enabled = false;
+            buttonSetArrayLength.BackColor = Color.DarkGray;
+            numericSetArrayLength.Enabled = false;
+
+            if (arrayCounterReady == false)
+            {
+                showArrayValueCounter();
+            }
+
+        }
+
+        private void buttonResetArray_Click(object sender, EventArgs e)
+        {
+            buttonResetArray.Visible = false;
+            buttonSetArrayLength.BackColor = Color.LightSteelBlue;
+            buttonSetArrayLength.Enabled = true;
+            numericSetArrayLength.Enabled = true;
+            numericSetArrayLength.Value = 0;
+            textBoxInputArrayValue.Text = "0";
+            arrayCounterReady = false;
+            hideArrayValueCounter();
+        }
+
+        private void buttonInputIntoArray_Click(object sender, EventArgs e)
+        {
+            textBoxInputArrayValue.Text = "0";
+        }
+
+        private void buttonSetArray_Click(object sender, EventArgs e)
+        {
+            buttonResetArray.Visible = false;
+            buttonSetArrayLength.BackColor = Color.LightSteelBlue;
+            buttonSetArrayLength.Enabled = true;
+            numericSetArrayLength.Enabled = true;
+            numericSetArrayLength.Value = 0;
+            textBoxInputArrayValue.Text = "0";
+            arrayCounterReady = false;
+            hideArrayValueCounter();
         }
     }
 }

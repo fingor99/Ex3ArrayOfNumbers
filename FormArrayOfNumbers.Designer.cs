@@ -62,6 +62,7 @@
             this.buttonSetArrayLength.TabIndex = 1;
             this.buttonSetArrayLength.Text = "Set Array Length";
             this.buttonSetArrayLength.UseVisualStyleBackColor = false;
+            this.buttonSetArrayLength.Click += new System.EventHandler(this.buttonSetArrayLength_Click);
             // 
             // numericSetArrayLength
             // 
@@ -83,6 +84,7 @@
             this.buttonResetArray.Text = "Reset Array";
             this.buttonResetArray.UseVisualStyleBackColor = false;
             this.buttonResetArray.Visible = false;
+            this.buttonResetArray.Click += new System.EventHandler(this.buttonResetArray_Click);
             // 
             // labelInputArrayValue
             // 
@@ -112,6 +114,7 @@
             this.buttonInputIntoArray.TabIndex = 6;
             this.buttonInputIntoArray.Text = "Input Into Array";
             this.buttonInputIntoArray.UseVisualStyleBackColor = false;
+            this.buttonInputIntoArray.Click += new System.EventHandler(this.buttonInputIntoArray_Click);
             // 
             // labelArrayAmountInput
             // 
@@ -156,6 +159,7 @@
             this.buttonSetArray.TabIndex = 10;
             this.buttonSetArray.Text = "Set Array";
             this.buttonSetArray.UseVisualStyleBackColor = false;
+            this.buttonSetArray.Click += new System.EventHandler(this.buttonSetArray_Click);
             // 
             // FormArrayOfNumbers
             // 
