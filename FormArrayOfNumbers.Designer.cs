@@ -39,6 +39,8 @@
             this.label1 = new System.Windows.Forms.Label();
             this.labelArrayCapacity = new System.Windows.Forms.Label();
             this.buttonSetArray = new System.Windows.Forms.Button();
+            this.labelArrayDesc = new System.Windows.Forms.Label();
+            this.labelArray = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,7 +56,7 @@
             // 
             // buttonSetArrayLength
             // 
-            this.buttonSetArrayLength.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonSetArrayLength.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonSetArrayLength.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.buttonSetArrayLength.Location = new System.Drawing.Point(166, 120);
             this.buttonSetArrayLength.Name = "buttonSetArrayLength";
@@ -98,6 +100,7 @@
             // 
             // textBoxInputArrayValue
             // 
+            this.textBoxInputArrayValue.Enabled = false;
             this.textBoxInputArrayValue.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBoxInputArrayValue.Location = new System.Drawing.Point(388, 69);
             this.textBoxInputArrayValue.Name = "textBoxInputArrayValue";
@@ -106,7 +109,8 @@
             // 
             // buttonInputIntoArray
             // 
-            this.buttonInputIntoArray.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.buttonInputIntoArray.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonInputIntoArray.Enabled = false;
             this.buttonInputIntoArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.buttonInputIntoArray.Location = new System.Drawing.Point(413, 120);
             this.buttonInputIntoArray.Name = "buttonInputIntoArray";
@@ -161,11 +165,32 @@
             this.buttonSetArray.UseVisualStyleBackColor = false;
             this.buttonSetArray.Click += new System.EventHandler(this.buttonSetArray_Click);
             // 
+            // labelArrayDesc
+            // 
+            this.labelArrayDesc.AutoSize = true;
+            this.labelArrayDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelArrayDesc.Location = new System.Drawing.Point(24, 217);
+            this.labelArrayDesc.Name = "labelArrayDesc";
+            this.labelArrayDesc.Size = new System.Drawing.Size(54, 20);
+            this.labelArrayDesc.TabIndex = 11;
+            this.labelArrayDesc.Text = "Array:";
+            // 
+            // labelArray
+            // 
+            this.labelArray.AutoSize = true;
+            this.labelArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelArray.Location = new System.Drawing.Point(78, 218);
+            this.labelArray.Name = "labelArray";
+            this.labelArray.Size = new System.Drawing.Size(0, 20);
+            this.labelArray.TabIndex = 12;
+            // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 616);
+            this.Controls.Add(this.labelArray);
+            this.Controls.Add(this.labelArrayDesc);
             this.Controls.Add(this.buttonSetArray);
             this.Controls.Add(this.labelArrayCapacity);
             this.Controls.Add(this.label1);
@@ -198,6 +223,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label labelArrayCapacity;
         private System.Windows.Forms.Button buttonSetArray;
+        private System.Windows.Forms.Label labelArrayDesc;
+        private System.Windows.Forms.Label labelArray;
     }
 }
 
