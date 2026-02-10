@@ -40,6 +40,10 @@ namespace Ex3ArrayOfNumbers
             buttonSetArrayLength.Enabled = false;
             buttonSetArrayLength.BackColor = Color.DarkGray;
             numericSetArrayLength.Enabled = false;
+            buttonInputIntoArray.Enabled = true;
+            buttonInputIntoArray.BackColor = Color.LightSteelBlue;
+            buttonInputIntoArray.Enabled = true;
+            textBoxInputArrayValue.Enabled = true;
 
             if (arrayCounterReady == false)
             {
@@ -55,14 +59,17 @@ namespace Ex3ArrayOfNumbers
             buttonSetArrayLength.Enabled = true;
             numericSetArrayLength.Enabled = true;
             numericSetArrayLength.Value = 0;
-            textBoxInputArrayValue.Text = "0";
+            textBoxInputArrayValue.Text = "";
             arrayCounterReady = false;
             hideArrayValueCounter();
+            buttonInputIntoArray.BackColor = Color.DarkGray;
+            buttonInputIntoArray.Enabled = false;
+            textBoxInputArrayValue.Enabled = false;
         }
 
         private void buttonInputIntoArray_Click(object sender, EventArgs e)
         {
-            textBoxInputArrayValue.Text = "0";
+            textBoxInputArrayValue.Text = "";
         }
 
         private void buttonSetArray_Click(object sender, EventArgs e)
@@ -72,9 +79,12 @@ namespace Ex3ArrayOfNumbers
             buttonSetArrayLength.Enabled = true;
             numericSetArrayLength.Enabled = true;
             numericSetArrayLength.Value = 0;
-            textBoxInputArrayValue.Text = "0";
+            textBoxInputArrayValue.Text = "";
             arrayCounterReady = false;
             hideArrayValueCounter();
+            buttonInputIntoArray.BackColor = Color.DarkGray;
+            buttonInputIntoArray.Enabled = false;
+            textBoxInputArrayValue.Enabled = false;
         }
     }
 }
