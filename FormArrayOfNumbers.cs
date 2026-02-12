@@ -32,6 +32,15 @@ namespace Ex3ArrayOfNumbers
             labelArrayCapacity.Visible = false;
         }
 
+        private void checkIfArrayFull()
+        {
+            if (arrayIndex == arrayValues.Length)
+            {
+                buttonInputIntoArray.Enabled = false;
+                buttonInputIntoArray.BackColor = Color.DarkGray;
+            }
+        }
+
         private string showArray()
         {
             if (arrayValues == null || arrayIndex == 0)
@@ -51,14 +60,6 @@ namespace Ex3ArrayOfNumbers
 
         private void buttonSetArrayLength_Click(object sender, EventArgs e)
         {
-            buttonResetArray.Visible = true;
-            buttonSetArrayLength.Enabled = false;
-            buttonSetArrayLength.BackColor = Color.DarkGray;
-            numericSetArrayLength.Enabled = false;
-            buttonInputIntoArray.Enabled = true;
-            buttonInputIntoArray.BackColor = Color.LightSteelBlue;
-            buttonInputIntoArray.Enabled = true;
-            textBoxInputArrayValue.Enabled = true;
 
             try
             {
@@ -66,16 +67,28 @@ namespace Ex3ArrayOfNumbers
 
                 if (arrayLength == 0)
                 {
-                    // show error message
+                    MessageBox.Show("Please input a value more than 0");
                     return;
                 }
 
                 Array.Resize(ref arrayValues, arrayLength);
                 arrayIndex = 0;
+                labelArrayCapacity.Text = arrayLength.ToString();
+
+                buttonResetArray.Visible = true;
+                buttonSetArrayLength.Enabled = false;
+                buttonSetArrayLength.BackColor = Color.DarkGray;
+                numericSetArrayLength.Enabled = false;
+                buttonInputIntoArray.Enabled = true;
+                buttonInputIntoArray.BackColor = Color.LightSteelBlue;
+                buttonInputIntoArray.Enabled = true;
+                textBoxInputArrayValue.Enabled = true;
+
             }
             catch (Exception ex)
             {
-                //
+                MessageBox.Show("Invalid input, please input a positive, whole integer");
+                return;
             }
 
             if (arrayCounterReady == false)
@@ -113,24 +126,26 @@ namespace Ex3ArrayOfNumbers
 
                 if (arrayValues == null)
                 {
-                    // show error message on form
+                    MessageBox.Show("Please input a whole number into the array");
                     return;
                 }
 
                 else if (arrayIndex >= arrayValues.Length)
                 {
-                    // show error message on form
+                    MessageBox.Show("Cannot input more values into the array");
                     return;
                 }
 
 
                 arrayValues[arrayIndex++] = arrayValue;
+                labelArrayAmountInput.Text = arrayIndex.ToString();
+                checkIfArrayFull();
 
             }
 
             catch (Exception ex)
             {
-                // show error message of form thats different
+                MessageBox.Show("Invalid input");
                 return;
             }
 
