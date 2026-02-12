@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -14,6 +15,8 @@ namespace Ex3ArrayOfNumbers
 
         private int _newArrayLength;
         private int[] _newArray;
+
+        private int _arrayIndex;
 
         // may want to mess about with getters and setters for the accessor functions
         public int ArrayLength
@@ -53,6 +56,29 @@ namespace Ex3ArrayOfNumbers
             set {  _newArrayLength = _arrayLength; }
         }
 
+        // more accessor methods for array elements
+
+        public int ArrayIndex
+        {
+            get { return _arrayIndex;  }
+            set { _arrayIndex = value; }
+        }
+
+        public int GetArrayElement
+        {
+            get => NewArrayValues[ArrayIndex];
+        }
+
+        public int SetArrayElement
+        {
+            set
+            {
+                NewArrayValues[ArrayIndex] = value;
+                //ArrayIndex++;
+            }
+        }
+
+
 
         // constructors
         public ArrayOfNumbers(int array_length)
@@ -69,13 +95,15 @@ namespace Ex3ArrayOfNumbers
         // functions
         private void createNewArray()
         {
-            Array.Resize(ref _newArray, _newArrayLength);
+            Array.Resize(ref _newArray, NewArrayLength);
 
-            for (int i=0; i < _newArrayLength; i++)
+            for (int ArrayIndex= 0; ArrayIndex < NewArrayLength; ArrayIndex++)
             {
-                NewArrayValues[i] = ArrayValues[i];
+                NewArrayValues[ArrayIndex] = ArrayValues[ArrayIndex];
             }
 
         }
+
+
     }
 }
