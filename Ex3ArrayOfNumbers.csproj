@@ -46,6 +46,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArrayOfNumbers.cs" />
     <Compile Include="FormArrayOfNumbers.cs">
       <SubType>Form</SubType>
     </Compile>

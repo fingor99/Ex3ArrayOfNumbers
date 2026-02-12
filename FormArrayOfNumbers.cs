@@ -18,6 +18,8 @@ namespace Ex3ArrayOfNumbers
         int[] arrayValues;
         int arrayLength;
 
+        ArrayOfNumbers array_of_numbers = new ArrayOfNumbers(0);
+
         private void showArrayValueCounter()
         {
             labelArrayAmountInput.Visible = true;
@@ -83,6 +85,8 @@ namespace Ex3ArrayOfNumbers
                 buttonInputIntoArray.BackColor = Color.LightSteelBlue;
                 buttonInputIntoArray.Enabled = true;
                 textBoxInputArrayValue.Enabled = true;
+
+                array_of_numbers.ArrayLength = arrayLength;
 
             }
             catch (Exception ex)
@@ -170,6 +174,8 @@ namespace Ex3ArrayOfNumbers
             textBoxInputArrayValue.Enabled = false;
 
             labelArray.Text = $"{showArray()}";
+
+            ArrayOfNumbers array_of_numbers = new ArrayOfNumbers(arrayValues);
         }
 
         private void FormArrayOfNumbers_Load(object sender, EventArgs e)
