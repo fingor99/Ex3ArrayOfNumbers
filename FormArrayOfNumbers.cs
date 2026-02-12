@@ -145,7 +145,7 @@ namespace Ex3ArrayOfNumbers
 
             catch (Exception ex)
             {
-                MessageBox.Show("Invalid input");
+                MessageBox.Show("Invalid input, please input a whole number into the array");
                 return;
             }
 
