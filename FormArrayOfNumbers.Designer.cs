@@ -169,17 +169,18 @@
             // 
             this.labelArrayDesc.AutoSize = true;
             this.labelArrayDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelArrayDesc.Location = new System.Drawing.Point(24, 217);
+            this.labelArrayDesc.Location = new System.Drawing.Point(26, 218);
             this.labelArrayDesc.Name = "labelArrayDesc";
             this.labelArrayDesc.Size = new System.Drawing.Size(54, 20);
             this.labelArrayDesc.TabIndex = 11;
             this.labelArrayDesc.Text = "Array:";
+            this.labelArrayDesc.Click += new System.EventHandler(this.labelArrayDesc_Click);
             // 
             // labelArray
             // 
             this.labelArray.AutoSize = true;
             this.labelArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelArray.Location = new System.Drawing.Point(78, 218);
+            this.labelArray.Location = new System.Drawing.Point(92, 218);
             this.labelArray.Name = "labelArray";
             this.labelArray.Size = new System.Drawing.Size(0, 20);
             this.labelArray.TabIndex = 12;
@@ -204,6 +205,7 @@
             this.Controls.Add(this.labelInputArrayDesc);
             this.Name = "FormArrayOfNumbers";
             this.Text = "Array of Numbers";
+            this.Load += new System.EventHandler(this.FormArrayOfNumbers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
