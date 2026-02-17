@@ -49,7 +49,8 @@ namespace Ex3ArrayOfNumbers
 
         public override string ToString()
         {
-            string string_text = $"Maximum number in array : {GetMax()}" +
+            string string_text = $"ToString output :" +
+                $"\n Maximum number in array : {GetMax()}" +
                 $"\n The average of the values in the array : {GetAverage()}" +
                 $"\n The sum of all values in the array : {GetSum()}" +
                 $"\n The number of values in the array : {GetCount()}";

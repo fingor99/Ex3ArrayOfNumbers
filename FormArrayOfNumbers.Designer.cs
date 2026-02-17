@@ -364,7 +364,7 @@
             this.groupBoxToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
             this.groupBoxToString.Location = new System.Drawing.Point(465, 591);
             this.groupBoxToString.Name = "groupBoxToString";
-            this.groupBoxToString.Size = new System.Drawing.Size(355, 190);
+            this.groupBoxToString.Size = new System.Drawing.Size(355, 114);
             this.groupBoxToString.TabIndex = 30;
             this.groupBoxToString.TabStop = false;
             // 
@@ -379,6 +379,7 @@
             this.buttonToString.TabIndex = 31;
             this.buttonToString.Text = "To String";
             this.buttonToString.UseVisualStyleBackColor = false;
+            this.buttonToString.Click += new System.EventHandler(this.buttonToString_Click_1);
             // 
             // FormArrayOfNumbers
             // 

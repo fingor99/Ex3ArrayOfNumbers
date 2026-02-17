@@ -244,7 +244,7 @@ namespace Ex3ArrayOfNumbers
 
         private void buttonToString_Click(object sender, EventArgs e)
         {
-            //labelArray.Text = array_of_numbers.ShowArray();
+            //
         }
 
         private void buttonMax_Click(object sender, EventArgs e)
@@ -297,6 +297,11 @@ namespace Ex3ArrayOfNumbers
                 textBoxGcdA.Text = " ";
                 textBoxGcdB.Text = " ";
             }
+        }
+
+        private void buttonToString_Click_1(object sender, EventArgs e)
+        {
+            groupBoxToString.Text = array_of_numbers.ToString();
         }
     }
 }
