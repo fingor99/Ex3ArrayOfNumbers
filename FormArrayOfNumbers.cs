@@ -229,7 +229,12 @@ namespace Ex3ArrayOfNumbers
 
         private void buttonToString_Click(object sender, EventArgs e)
         {
-            labelArray.Text = array_of_numbers.ToString();
+            labelArray.Text = array_of_numbers.ShowArray();
+        }
+
+        private void buttonMax_Click(object sender, EventArgs e)
+        {
+            labelMax.Text = $"{array_of_numbers.GetMax()}";
         }
     }
 }

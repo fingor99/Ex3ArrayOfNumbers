@@ -47,14 +47,19 @@ namespace Ex3ArrayOfNumbers
         // functions
 
 
-        public override string ToString()
+        //public override string ToString(int max, int sum, int avg, int count, int equal, int )
+        //{
+        //    return string.Join(", ", ArrayValues);
+        //}
+
+        public string GetMax()
         {
-            return string.Join(", ", ArrayValues);
+            return $"{ArrayValues.Max()}";
         }
 
-        public void GetMax()
+        public string ShowArray()
         {
-            return ToString(ArrayValues.Max());
+            return string.Join(", ", ArrayValues);
         }
 
 

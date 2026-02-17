@@ -220,6 +220,7 @@
             this.buttonMax.TabIndex = 14;
             this.buttonMax.Text = "Max";
             this.buttonMax.UseVisualStyleBackColor = false;
+            this.buttonMax.Click += new System.EventHandler(this.buttonMax_Click);
             // 
             // buttonGCD
             // 
