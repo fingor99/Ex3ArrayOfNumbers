@@ -148,5 +148,22 @@ namespace Ex3ArrayOfNumbers
             }
         }
 
+        public void ScalarMultiply(int scalar)
+        {
+            for (int i = 0; i < ArrayValues.Length; i++)
+            {
+                ArrayValues[i] = ArrayValues[i] * scalar;
+            }
+        }
+
+        public void AddConstant(int constant)
+        {
+            for (int i = 0; i < ArrayValues.Length; i++)
+            {
+                ArrayValues[i] = ArrayValues[i] + constant;
+            }
+        }
+
+
     }
 }
