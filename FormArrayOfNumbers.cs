@@ -60,6 +60,18 @@ namespace Ex3ArrayOfNumbers
             }
         }
 
+        private string ShowArray(int[] array)
+        {
+            if (array == null || array.Length == 0)
+            {
+                return string.Empty;
+            }
+            else
+            {
+                return string.Join(", ", array);
+            }
+        }
+
         private void EnableMethodButtons()
         {
             buttonToString.Enabled = true;
@@ -67,12 +79,19 @@ namespace Ex3ArrayOfNumbers
             buttonAverage.Enabled = true;
             buttonCount.Enabled = true;
             buttonSum.Enabled = true;
+            buttonAddConstant.Enabled = true;
+            buttonArrayScalar.Enabled = true;
 
             buttonToString.BackColor = Color.LightSteelBlue;
             buttonMax.BackColor = Color.LightSteelBlue;
             buttonAverage.BackColor = Color.LightSteelBlue;
             buttonCount.BackColor = Color.LightSteelBlue;
             buttonSum.BackColor = Color.LightSteelBlue;
+            buttonAddConstant.BackColor = Color.LightSteelBlue;
+            buttonArrayScalar.BackColor = Color.LightSteelBlue;
+
+            numericUpDownArrayScalar.Enabled = true;
+            numericUpDownAddConstant.Enabled = true;
         }
 
         private void DisableMethodButtons()
@@ -82,12 +101,22 @@ namespace Ex3ArrayOfNumbers
             buttonAverage.Enabled = false;
             buttonCount.Enabled = false;
             buttonSum.Enabled = false;
+            buttonAddConstant.Enabled = false;
+            buttonArrayScalar.Enabled = false;
 
             buttonToString.BackColor = Color.DarkGray;
             buttonMax.BackColor = Color.DarkGray;
             buttonAverage.BackColor = Color.DarkGray;
             buttonCount.BackColor = Color.DarkGray;
             buttonSum.BackColor = Color.DarkGray;
+            buttonAddConstant.BackColor = Color.DarkGray;
+            buttonArrayScalar.BackColor = Color.DarkGray;
+
+            numericUpDownArrayScalar.Enabled = false;
+            numericUpDownAddConstant.Enabled = false;
+
+            numericUpDownAddConstant.Value = 0;
+            numericUpDownArrayScalar.Value = 0;
         }
 
         private void ResetArrayFields()
@@ -164,6 +193,8 @@ namespace Ex3ArrayOfNumbers
             buttonInputIntoArray.Enabled = false;
             textBoxInputArrayValue.Enabled = false;
 
+            labelArrayAmountInput.Text = "0";
+
             numericSetArrayLength.Value = 0;
             textBoxInputArrayValue.Text = "";
             arrayCounterReady = false;
@@ -191,6 +222,7 @@ namespace Ex3ArrayOfNumbers
                 if (arrayValues == null)
                 {
                     MessageBox.Show("Please input a whole number into the array");
+                    textBoxInputArrayValue.Text = string.Empty;
                     return;
                 }
 
@@ -327,6 +359,34 @@ namespace Ex3ArrayOfNumbers
                 MessageBox.Show("Invalid inputs, please enter two whole integer numbers.");
                 textBoxAreEqualA.Text = " ";
                 textBoxAreEqualB.Text = " ";
+            }
+        }
+
+        private void buttonArrayScalar_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                array_of_numbers.ScalarMultiply(Convert.ToInt32(numericUpDownArrayScalar.Value));
+                labelArray.Text = ShowArray(array_of_numbers.GetArray());
+            }
+            catch
+            {
+                MessageBox.Show("Invalid inputs, please enter two whole integer numbers.");
+                numericUpDownArrayScalar.Value = 0;
+            }
+        }
+
+        private void buttonAddConstant_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                array_of_numbers.AddConstant(Convert.ToInt32(numericUpDownAddConstant.Value));
+                labelArray.Text = ShowArray(array_of_numbers.GetArray());
+            }
+            catch
+            {
+                MessageBox.Show("Invalid inputs, please enter two whole integer numbers.");
+                numericUpDownAddConstant.Value = 0;
             }
         }
     }

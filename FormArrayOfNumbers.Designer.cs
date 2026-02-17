@@ -475,6 +475,7 @@
             this.buttonArrayScalar.TabIndex = 39;
             this.buttonArrayScalar.Text = "Scalar Multiply";
             this.buttonArrayScalar.UseVisualStyleBackColor = false;
+            this.buttonArrayScalar.Click += new System.EventHandler(this.buttonArrayScalar_Click);
             // 
             // buttonAddConstant
             // 
@@ -487,6 +488,7 @@
             this.buttonAddConstant.TabIndex = 42;
             this.buttonAddConstant.Text = "Add Constant";
             this.buttonAddConstant.UseVisualStyleBackColor = false;
+            this.buttonAddConstant.Click += new System.EventHandler(this.buttonAddConstant_Click);
             // 
             // numericUpDownAddConstant
             // 
