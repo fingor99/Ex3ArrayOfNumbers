@@ -121,14 +121,16 @@ namespace Ex3ArrayOfNumbers
                 labelArrayCapacity.Text = arrayLength.ToString();
 
                 buttonResetArray.Visible = true;
+                buttonSetArray.Visible = true;
+
                 buttonSetArrayLength.Enabled = false;
-                buttonSetArrayLength.BackColor = Color.DarkGray;
                 numericSetArrayLength.Enabled = false;
                 buttonInputIntoArray.Enabled = true;
-                buttonInputIntoArray.BackColor = Color.LightSteelBlue;
                 buttonInputIntoArray.Enabled = true;
                 textBoxInputArrayValue.Enabled = true;
-                buttonSetArray.Visible = true;
+
+                buttonSetArrayLength.BackColor = Color.DarkGray;
+                buttonInputIntoArray.BackColor = Color.LightSteelBlue;
 
                 array_of_numbers = new ArrayOfNumbers(arrayLength);
 
@@ -152,20 +154,23 @@ namespace Ex3ArrayOfNumbers
         private void buttonResetArray_Click(object sender, EventArgs e)
         {
             buttonResetArray.Visible = false;
+            buttonSetArray.Visible = false;
+
             buttonSetArrayLength.BackColor = Color.LightSteelBlue;
+            buttonInputIntoArray.BackColor = Color.DarkGray;
+
             buttonSetArrayLength.Enabled = true;
             numericSetArrayLength.Enabled = true;
+            buttonInputIntoArray.Enabled = false;
+            textBoxInputArrayValue.Enabled = false;
+
             numericSetArrayLength.Value = 0;
             textBoxInputArrayValue.Text = "";
             arrayCounterReady = false;
-            HideArrayValueCounter();
-            buttonInputIntoArray.BackColor = Color.DarkGray;
-            buttonInputIntoArray.Enabled = false;
-            textBoxInputArrayValue.Enabled = false;
-            buttonSetArray.Visible = false;
             arrayLength = 0;
             groupBoxToString.Text = String.Empty;
 
+            HideArrayValueCounter();
             ResetArrayFields();
             DisableMethodButtons();
             ResetArray();
@@ -220,7 +225,9 @@ namespace Ex3ArrayOfNumbers
             numericSetArrayLength.Value = 0;
             textBoxInputArrayValue.Text = "";
             arrayCounterReady = false;
+
             HideArrayValueCounter();
+
             buttonInputIntoArray.BackColor = Color.DarkGray;
             buttonInputIntoArray.Enabled = false;
             textBoxInputArrayValue.Enabled = false;
