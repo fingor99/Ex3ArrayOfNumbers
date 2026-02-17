@@ -62,6 +62,11 @@ namespace Ex3ArrayOfNumbers
             return string.Join(", ", ArrayValues);
         }
 
+        public string GetCount()
+        {
+            return $"{ArrayValues.Count()}";
+        }
+
 
     }
 }
