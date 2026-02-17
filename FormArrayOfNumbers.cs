@@ -20,21 +20,21 @@ namespace Ex3ArrayOfNumbers
 
         ArrayOfNumbers array_of_numbers = new ArrayOfNumbers(0);
 
-        private void showArrayValueCounter()
+        private void ShowArrayValueCounter()
         {
             labelArrayAmountInput.Visible = true;
             label1.Visible = true;
             labelArrayCapacity.Visible = true;
         }
 
-        private void hideArrayValueCounter()
+        private void HideArrayValueCounter()
         {
             labelArrayAmountInput.Visible = false;
             label1.Visible = false;
             labelArrayCapacity.Visible = false;
         }
 
-        private void checkIfArrayFull()
+        private void CheckIfArrayFull()
         {
             if (arrayIndex == arrayValues.Length)
             {
@@ -43,7 +43,7 @@ namespace Ex3ArrayOfNumbers
             }
         }
 
-        private string showArray()
+        private string ShowArray()
         {
             if (arrayValues == null || arrayIndex == 0)
             {
@@ -98,7 +98,7 @@ namespace Ex3ArrayOfNumbers
 
             if (arrayCounterReady == false)
             {
-                showArrayValueCounter();
+                ShowArrayValueCounter();
             }
 
 
@@ -113,7 +113,7 @@ namespace Ex3ArrayOfNumbers
             numericSetArrayLength.Value = 0;
             textBoxInputArrayValue.Text = "";
             arrayCounterReady = false;
-            hideArrayValueCounter();
+            HideArrayValueCounter();
             buttonInputIntoArray.BackColor = Color.DarkGray;
             buttonInputIntoArray.Enabled = false;
             textBoxInputArrayValue.Enabled = false;
@@ -144,7 +144,7 @@ namespace Ex3ArrayOfNumbers
 
                 arrayValues[arrayIndex++] = arrayValue;
                 labelArrayAmountInput.Text = arrayIndex.ToString();
-                checkIfArrayFull();
+                CheckIfArrayFull();
 
             }
 
@@ -169,12 +169,12 @@ namespace Ex3ArrayOfNumbers
             numericSetArrayLength.Value = 0;
             textBoxInputArrayValue.Text = "";
             arrayCounterReady = false;
-            hideArrayValueCounter();
+            HideArrayValueCounter();
             buttonInputIntoArray.BackColor = Color.DarkGray;
             buttonInputIntoArray.Enabled = false;
             textBoxInputArrayValue.Enabled = false;
 
-            labelArray.Text = $"{showArray()}";
+            labelArray.Text = $"{ShowArray()}";
 
             ArrayOfNumbers array_of_numbers = new ArrayOfNumbers(arrayValues);
         }
