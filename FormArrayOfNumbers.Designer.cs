@@ -207,6 +207,7 @@
             this.buttonToString.TabIndex = 13;
             this.buttonToString.Text = "Output Array To String";
             this.buttonToString.UseVisualStyleBackColor = false;
+            this.buttonToString.Click += new System.EventHandler(this.buttonToString_Click);
             // 
             // buttonMax
             // 

@@ -210,7 +210,7 @@ namespace Ex3ArrayOfNumbers
             buttonInputIntoArray.Enabled = false;
             textBoxInputArrayValue.Enabled = false;
 
-            labelArray.Text = $"{ShowArray()}";
+            //labelArray.Text = $"{ShowArray()}";
 
             ArrayOfNumbers array_of_numbers = new ArrayOfNumbers(arrayValues);
 
@@ -225,6 +225,11 @@ namespace Ex3ArrayOfNumbers
         private void labelArrayDesc_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonToString_Click(object sender, EventArgs e)
+        {
+            labelArray.Text = $"{array_of_numbers.ToString()}";
         }
     }
 }

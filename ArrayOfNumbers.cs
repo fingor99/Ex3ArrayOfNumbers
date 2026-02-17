@@ -111,7 +111,7 @@ namespace Ex3ArrayOfNumbers
             ArrayLength = array_length;
         }
 
-        private string override ToString()
+        public override string ToString()
         {
             if (NewArrayValues == null || ArrayIndex == 0)
             {
