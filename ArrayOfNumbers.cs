@@ -72,6 +72,11 @@ namespace Ex3ArrayOfNumbers
             return $"{ArrayValues.Sum()}";
         }
 
+        public string GetAverage()
+        {
+            return $"{ArrayValues.Average()}";
+        }
+
 
     }
 }
