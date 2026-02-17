@@ -86,7 +86,8 @@ namespace Ex3ArrayOfNumbers
                 buttonInputIntoArray.Enabled = true;
                 textBoxInputArrayValue.Enabled = true;
 
-                array_of_numbers.ArrayLength = arrayLength;
+                //array_of_numbers.ArrayLength = arrayLength; // change
+                array_of_numbers.SetArrayLength(arrayLength);
 
             }
             catch (Exception ex)

@@ -19,14 +19,14 @@ namespace Ex3ArrayOfNumbers
         private int _arrayIndex;
 
         // may want to mess about with getters and setters for the accessor functions
-        public int ArrayLength
+        private int ArrayLength
         {
             set { _arrayLength = value;
                 Array.Resize(ref _array, _arrayLength);
             }
         }
 
-        public int[] ArrayValues
+        private int[] ArrayValues
         {
             get
             {
@@ -38,7 +38,7 @@ namespace Ex3ArrayOfNumbers
             }
         }
 
-        public int[] NewArrayValues
+        private int[] NewArrayValues
         {
             get
             {
@@ -50,7 +50,7 @@ namespace Ex3ArrayOfNumbers
             }
         }
 
-        public int NewArrayLength
+        private int NewArrayLength
         {
             get { return _newArrayLength; }
             set {  _newArrayLength = _arrayLength; }
@@ -58,18 +58,19 @@ namespace Ex3ArrayOfNumbers
 
         // more accessor methods for array elements
 
-        public int ArrayIndex
+        private int ArrayIndex
         {
             get { return _arrayIndex;  }
             set { _arrayIndex = value; }
         }
 
-        public int GetArrayElement
+        // accessor methods for later use
+        private int GetArrayElement
         {
             get => NewArrayValues[ArrayIndex];
         }
 
-        public int SetArrayElement
+        private int SetArrayElement
         {
             set
             {
@@ -89,11 +90,11 @@ namespace Ex3ArrayOfNumbers
         public ArrayOfNumbers(int[] array)
         {
             ArrayValues = array;
-            createNewArray();
+            CreateNewArray();
         }
 
         // functions
-        private void createNewArray()
+        private void CreateNewArray()
         {
             Array.Resize(ref _newArray, NewArrayLength);
 
@@ -102,6 +103,11 @@ namespace Ex3ArrayOfNumbers
                 NewArrayValues[ArrayIndex] = ArrayValues[ArrayIndex];
             }
 
+        }
+
+        public void SetArrayLength(int array_length)
+        {
+            ArrayLength = array_length;
         }
 
 
