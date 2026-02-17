@@ -82,6 +82,53 @@ namespace Ex3ArrayOfNumbers
             return ArrayValues;
         }
 
+        public int GetGCD(int number_a, int number_b)
+        {
+
+            int remainder;
+
+            while (number_b != 0)
+            {
+                if (number_b > number_a)
+                {
+                    int placeholder;
+                    placeholder = number_a;
+                    number_a = number_b;
+                    number_a = placeholder;
+                }
+
+
+                if (number_b == 0 || number_a == 0)
+                {
+                    return number_b; // returns the number thats not empty if there is one
+                }
+
+                else if (number_b == number_a)
+                {
+                    return number_b;
+                }
+
+                else
+                {
+                    remainder = number_a % number_b;
+                    if (remainder == 0)
+                    {
+                        return number_b;
+                    }
+                    else
+                    {
+                        number_a = number_b;
+                        number_b = remainder;
+                    }
+                }
+
+
+            } // end of for loop
+
+            return number_a;
+
+        } // end of getGCD function
+
 
     }
 }
