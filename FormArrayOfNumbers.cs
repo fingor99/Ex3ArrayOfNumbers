@@ -312,5 +312,22 @@ namespace Ex3ArrayOfNumbers
         {
             groupBoxToString.Text = array_of_numbers.ToString();
         }
+
+        private void buttonAreEqual_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int numberA = Convert.ToInt32(textBoxAreEqualA.Text);
+                int numberB = Convert.ToInt32(textBoxAreEqualB.Text);
+
+                labelAreEqual.Text = array_of_numbers.AreEqual(numberA, numberB);
+            }
+            catch
+            {
+                MessageBox.Show("Invalid inputs, please enter two whole integer numbers.");
+                textBoxAreEqualA.Text = " ";
+                textBoxAreEqualB.Text = " ";
+            }
+        }
     }
 }

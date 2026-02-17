@@ -435,6 +435,7 @@
             this.buttonAreEqual.TabIndex = 32;
             this.buttonAreEqual.Text = "Check";
             this.buttonAreEqual.UseVisualStyleBackColor = false;
+            this.buttonAreEqual.Click += new System.EventHandler(this.buttonAreEqual_Click);
             // 
             // FormArrayOfNumbers
             // 
