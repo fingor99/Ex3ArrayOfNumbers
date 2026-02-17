@@ -67,6 +67,11 @@ namespace Ex3ArrayOfNumbers
             return $"{ArrayValues.Count()}";
         }
 
+        public string GetSum()
+        {
+            return $"{ArrayValues.Sum()}";
+        }
+
 
     }
 }
