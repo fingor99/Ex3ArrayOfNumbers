@@ -55,6 +55,7 @@
             this.textBoxGcdA = new System.Windows.Forms.TextBox();
             this.textBoxGcdB = new System.Windows.Forms.TextBox();
             this.groupBoxToString = new System.Windows.Forms.GroupBox();
+            this.buttonToString = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
             this.SuspendLayout();
             // 
@@ -360,18 +361,31 @@
             // 
             this.groupBoxToString.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.groupBoxToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.groupBoxToString.Location = new System.Drawing.Point(465, 515);
+            this.groupBoxToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
+            this.groupBoxToString.Location = new System.Drawing.Point(465, 591);
             this.groupBoxToString.Name = "groupBoxToString";
             this.groupBoxToString.Size = new System.Drawing.Size(355, 190);
             this.groupBoxToString.TabIndex = 30;
             this.groupBoxToString.TabStop = false;
+            // 
+            // buttonToString
+            // 
+            this.buttonToString.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonToString.Enabled = false;
+            this.buttonToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonToString.Location = new System.Drawing.Point(596, 504);
+            this.buttonToString.Name = "buttonToString";
+            this.buttonToString.Size = new System.Drawing.Size(93, 59);
+            this.buttonToString.TabIndex = 31;
+            this.buttonToString.Text = "To String";
+            this.buttonToString.UseVisualStyleBackColor = false;
             // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 876);
+            this.Controls.Add(this.buttonToString);
             this.Controls.Add(this.groupBoxToString);
             this.Controls.Add(this.textBoxGcdB);
             this.Controls.Add(this.textBoxGcdA);
@@ -437,6 +451,7 @@
         private System.Windows.Forms.TextBox textBoxGcdA;
         private System.Windows.Forms.TextBox textBoxGcdB;
         private System.Windows.Forms.GroupBox groupBoxToString;
+        private System.Windows.Forms.Button buttonToString;
     }
 }
 
