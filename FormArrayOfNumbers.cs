@@ -251,5 +251,10 @@ namespace Ex3ArrayOfNumbers
         {
             labelSum.Text = $"{array_of_numbers.GetSum()}";
         }
+
+        private void buttonAverage_Click(object sender, EventArgs e)
+        {
+            labelAverage.Text = $"{array_of_numbers.GetAverage()}";
+        }
     }
 }
