@@ -136,5 +136,17 @@ namespace Ex3ArrayOfNumbers
         } // end of getGCD function
 
 
+        public void AreEqual(int num_a, int num_b)
+        {
+            if (num_a == num_b)
+            {
+                return "Yes";
+            }
+            else
+            {
+                return "No";
+            }
+        }
+
     }
 }
