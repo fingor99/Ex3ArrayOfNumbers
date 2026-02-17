@@ -47,10 +47,15 @@ namespace Ex3ArrayOfNumbers
         // functions
 
 
-        //public override string ToString(int max, int sum, int avg, int count, int equal, int )
-        //{
-        //    return string.Join(", ", ArrayValues);
-        //}
+        public override string ToString()
+        {
+            string string_text = $"Maximum number in array : {GetMax()}" +
+                $"\n The average of the values in the array : {GetAverage()}" +
+                $"\n The sum of all values in the array : {GetSum()}" +
+                $"\n The number of values in the array : {GetCount()}";
+
+            return string_text;
+        }
 
         public string GetMax()
         {
