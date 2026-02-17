@@ -54,6 +54,7 @@
             this.labelGCD = new System.Windows.Forms.Label();
             this.textBoxGcdA = new System.Windows.Forms.TextBox();
             this.textBoxGcdB = new System.Windows.Forms.TextBox();
+            this.groupBoxToString = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
             this.SuspendLayout();
             // 
@@ -355,11 +356,23 @@
             this.textBoxGcdB.Size = new System.Drawing.Size(122, 26);
             this.textBoxGcdB.TabIndex = 29;
             // 
+            // groupBoxToString
+            // 
+            this.groupBoxToString.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.groupBoxToString.Location = new System.Drawing.Point(465, 515);
+            this.groupBoxToString.Name = "groupBoxToString";
+            this.groupBoxToString.Size = new System.Drawing.Size(355, 190);
+            this.groupBoxToString.TabIndex = 30;
+            this.groupBoxToString.TabStop = false;
+            // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 876);
+            this.Controls.Add(this.groupBoxToString);
             this.Controls.Add(this.textBoxGcdB);
             this.Controls.Add(this.textBoxGcdA);
             this.Controls.Add(this.labelGCD);
@@ -423,6 +436,7 @@
         private System.Windows.Forms.Label labelGCD;
         private System.Windows.Forms.TextBox textBoxGcdA;
         private System.Windows.Forms.TextBox textBoxGcdB;
+        private System.Windows.Forms.GroupBox groupBoxToString;
     }
 }
 
