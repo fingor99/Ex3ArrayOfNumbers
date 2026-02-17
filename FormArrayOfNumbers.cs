@@ -215,6 +215,7 @@ namespace Ex3ArrayOfNumbers
             array_of_numbers = new ArrayOfNumbers(arrayValues);
 
             EnableMethodButtons();
+
         }
 
         private void FormArrayOfNumbers_Load(object sender, EventArgs e)
@@ -255,6 +256,16 @@ namespace Ex3ArrayOfNumbers
         private void buttonAverage_Click(object sender, EventArgs e)
         {
             labelAverage.Text = $"{array_of_numbers.GetAverage()}";
+        }
+
+        private void numericUpDownGCDa_KeyUp(object sender, KeyEventArgs e)
+        {
+
+        }
+
+        private void numericUpDownGCDa_KeyDown(object sender, KeyEventArgs e)
+        {
+
         }
     }
 }

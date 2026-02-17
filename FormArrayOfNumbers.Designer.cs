@@ -232,7 +232,7 @@
             this.buttonGCD.BackColor = System.Drawing.Color.DarkGray;
             this.buttonGCD.Enabled = false;
             this.buttonGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonGCD.Location = new System.Drawing.Point(145, 701);
+            this.buttonGCD.Location = new System.Drawing.Point(165, 701);
             this.buttonGCD.Name = "buttonGCD";
             this.buttonGCD.Size = new System.Drawing.Size(93, 59);
             this.buttonGCD.TabIndex = 15;
@@ -334,16 +334,20 @@
             // numericUpDownGCDa
             // 
             this.numericUpDownGCDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.numericUpDownGCDa.Location = new System.Drawing.Point(41, 638);
+            this.numericUpDownGCDa.Location = new System.Drawing.Point(61, 638);
             this.numericUpDownGCDa.Name = "numericUpDownGCDa";
+            this.numericUpDownGCDa.ReadOnly = true;
             this.numericUpDownGCDa.Size = new System.Drawing.Size(131, 26);
             this.numericUpDownGCDa.TabIndex = 24;
+            this.numericUpDownGCDa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numericUpDownGCDa_KeyDown);
+            this.numericUpDownGCDa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.numericUpDownGCDa_KeyUp);
             // 
             // numericUpDownGCDb
             // 
             this.numericUpDownGCDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.numericUpDownGCDb.Location = new System.Drawing.Point(226, 638);
+            this.numericUpDownGCDb.Location = new System.Drawing.Point(246, 638);
             this.numericUpDownGCDb.Name = "numericUpDownGCDb";
+            this.numericUpDownGCDb.ReadOnly = true;
             this.numericUpDownGCDb.Size = new System.Drawing.Size(131, 26);
             this.numericUpDownGCDb.TabIndex = 25;
             // 
@@ -353,9 +357,9 @@
             this.labelGCDDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelGCDDesc.Location = new System.Drawing.Point(37, 586);
             this.labelGCDDesc.Name = "labelGCDDesc";
-            this.labelGCDDesc.Size = new System.Drawing.Size(340, 20);
+            this.labelGCDDesc.Size = new System.Drawing.Size(371, 20);
             this.labelGCDDesc.TabIndex = 26;
-            this.labelGCDDesc.Text = "Find the GCD of two numbers in your array :";
+            this.labelGCDDesc.Text = "Find the GCD of two numbers in the fields below";
             // 
             // labelGCD
             // 
@@ -363,7 +367,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelGCD.AutoEllipsis = true;
             this.labelGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelGCD.Location = new System.Drawing.Point(145, 793);
+            this.labelGCD.Location = new System.Drawing.Point(165, 793);
             this.labelGCD.Name = "labelGCD";
             this.labelGCD.Size = new System.Drawing.Size(93, 31);
             this.labelGCD.TabIndex = 27;
