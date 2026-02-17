@@ -61,7 +61,15 @@
             this.labelAreEqual = new System.Windows.Forms.Label();
             this.labelAreEqualDesc = new System.Windows.Forms.Label();
             this.buttonAreEqual = new System.Windows.Forms.Button();
+            this.labelArrayScalarDesc = new System.Windows.Forms.Label();
+            this.numericUpDownArrayScalar = new System.Windows.Forms.NumericUpDown();
+            this.buttonArrayScalar = new System.Windows.Forms.Button();
+            this.buttonAddConstant = new System.Windows.Forms.Button();
+            this.numericUpDownAddConstant = new System.Windows.Forms.NumericUpDown();
+            this.labelAddConstantDesc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownArrayScalar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAddConstant)).BeginInit();
             this.SuspendLayout();
             // 
             // labelInputArrayDesc
@@ -190,7 +198,7 @@
             // 
             this.labelArrayDesc.AutoSize = true;
             this.labelArrayDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelArrayDesc.Location = new System.Drawing.Point(26, 234);
+            this.labelArrayDesc.Location = new System.Drawing.Point(26, 210);
             this.labelArrayDesc.Name = "labelArrayDesc";
             this.labelArrayDesc.Size = new System.Drawing.Size(54, 20);
             this.labelArrayDesc.TabIndex = 11;
@@ -211,9 +219,9 @@
             this.buttonMax.BackColor = System.Drawing.Color.DarkGray;
             this.buttonMax.Enabled = false;
             this.buttonMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonMax.Location = new System.Drawing.Point(105, 335);
+            this.buttonMax.Location = new System.Drawing.Point(105, 289);
             this.buttonMax.Name = "buttonMax";
-            this.buttonMax.Size = new System.Drawing.Size(93, 59);
+            this.buttonMax.Size = new System.Drawing.Size(117, 40);
             this.buttonMax.TabIndex = 14;
             this.buttonMax.Text = "Max";
             this.buttonMax.UseVisualStyleBackColor = false;
@@ -223,7 +231,7 @@
             // 
             this.buttonGCD.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonGCD.Location = new System.Drawing.Point(171, 610);
+            this.buttonGCD.Location = new System.Drawing.Point(171, 420);
             this.buttonGCD.Name = "buttonGCD";
             this.buttonGCD.Size = new System.Drawing.Size(93, 59);
             this.buttonGCD.TabIndex = 15;
@@ -236,9 +244,9 @@
             this.buttonCount.BackColor = System.Drawing.Color.DarkGray;
             this.buttonCount.Enabled = false;
             this.buttonCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonCount.Location = new System.Drawing.Point(288, 335);
+            this.buttonCount.Location = new System.Drawing.Point(288, 289);
             this.buttonCount.Name = "buttonCount";
-            this.buttonCount.Size = new System.Drawing.Size(93, 59);
+            this.buttonCount.Size = new System.Drawing.Size(117, 40);
             this.buttonCount.TabIndex = 16;
             this.buttonCount.Text = "Count";
             this.buttonCount.UseVisualStyleBackColor = false;
@@ -249,9 +257,9 @@
             this.buttonSum.BackColor = System.Drawing.Color.DarkGray;
             this.buttonSum.Enabled = false;
             this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonSum.Location = new System.Drawing.Point(469, 335);
+            this.buttonSum.Location = new System.Drawing.Point(469, 289);
             this.buttonSum.Name = "buttonSum";
-            this.buttonSum.Size = new System.Drawing.Size(93, 59);
+            this.buttonSum.Size = new System.Drawing.Size(117, 40);
             this.buttonSum.TabIndex = 17;
             this.buttonSum.Text = "Sum";
             this.buttonSum.UseVisualStyleBackColor = false;
@@ -262,9 +270,9 @@
             this.buttonAverage.BackColor = System.Drawing.Color.DarkGray;
             this.buttonAverage.Enabled = false;
             this.buttonAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonAverage.Location = new System.Drawing.Point(644, 335);
+            this.buttonAverage.Location = new System.Drawing.Point(644, 289);
             this.buttonAverage.Name = "buttonAverage";
-            this.buttonAverage.Size = new System.Drawing.Size(93, 59);
+            this.buttonAverage.Size = new System.Drawing.Size(117, 40);
             this.buttonAverage.TabIndex = 18;
             this.buttonAverage.Text = "Average";
             this.buttonAverage.UseVisualStyleBackColor = false;
@@ -276,9 +284,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMax.AutoEllipsis = true;
             this.labelMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelMax.Location = new System.Drawing.Point(105, 428);
+            this.labelMax.Location = new System.Drawing.Point(105, 337);
             this.labelMax.Name = "labelMax";
-            this.labelMax.Size = new System.Drawing.Size(93, 31);
+            this.labelMax.Size = new System.Drawing.Size(117, 24);
             this.labelMax.TabIndex = 19;
             this.labelMax.Text = "0";
             this.labelMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -289,9 +297,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCount.AutoEllipsis = true;
             this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelCount.Location = new System.Drawing.Point(288, 428);
+            this.labelCount.Location = new System.Drawing.Point(288, 337);
             this.labelCount.Name = "labelCount";
-            this.labelCount.Size = new System.Drawing.Size(93, 31);
+            this.labelCount.Size = new System.Drawing.Size(117, 24);
             this.labelCount.TabIndex = 21;
             this.labelCount.Text = "0";
             this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -303,9 +311,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSum.AutoEllipsis = true;
             this.labelSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelSum.Location = new System.Drawing.Point(469, 428);
+            this.labelSum.Location = new System.Drawing.Point(469, 337);
             this.labelSum.Name = "labelSum";
-            this.labelSum.Size = new System.Drawing.Size(93, 31);
+            this.labelSum.Size = new System.Drawing.Size(117, 24);
             this.labelSum.TabIndex = 22;
             this.labelSum.Text = "0";
             this.labelSum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -316,9 +324,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAverage.AutoEllipsis = true;
             this.labelAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelAverage.Location = new System.Drawing.Point(644, 428);
+            this.labelAverage.Location = new System.Drawing.Point(644, 337);
             this.labelAverage.Name = "labelAverage";
-            this.labelAverage.Size = new System.Drawing.Size(93, 31);
+            this.labelAverage.Size = new System.Drawing.Size(117, 24);
             this.labelAverage.TabIndex = 23;
             this.labelAverage.Text = "0";
             this.labelAverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -327,7 +335,7 @@
             // 
             this.labelGCDDesc.AutoSize = true;
             this.labelGCDDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelGCDDesc.Location = new System.Drawing.Point(37, 515);
+            this.labelGCDDesc.Location = new System.Drawing.Point(37, 384);
             this.labelGCDDesc.Name = "labelGCDDesc";
             this.labelGCDDesc.Size = new System.Drawing.Size(371, 20);
             this.labelGCDDesc.TabIndex = 26;
@@ -339,7 +347,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelGCD.AutoEllipsis = true;
             this.labelGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelGCD.Location = new System.Drawing.Point(171, 702);
+            this.labelGCD.Location = new System.Drawing.Point(171, 484);
             this.labelGCD.Name = "labelGCD";
             this.labelGCD.Size = new System.Drawing.Size(93, 31);
             this.labelGCD.TabIndex = 27;
@@ -349,7 +357,7 @@
             // textBoxGcdA
             // 
             this.textBoxGcdA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBoxGcdA.Location = new System.Drawing.Point(41, 565);
+            this.textBoxGcdA.Location = new System.Drawing.Point(41, 434);
             this.textBoxGcdA.Name = "textBoxGcdA";
             this.textBoxGcdA.Size = new System.Drawing.Size(122, 26);
             this.textBoxGcdA.TabIndex = 28;
@@ -357,7 +365,7 @@
             // textBoxGcdB
             // 
             this.textBoxGcdB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBoxGcdB.Location = new System.Drawing.Point(275, 565);
+            this.textBoxGcdB.Location = new System.Drawing.Point(275, 434);
             this.textBoxGcdB.Name = "textBoxGcdB";
             this.textBoxGcdB.Size = new System.Drawing.Size(122, 26);
             this.textBoxGcdB.TabIndex = 29;
@@ -367,7 +375,7 @@
             this.groupBoxToString.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBoxToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.25F);
-            this.groupBoxToString.Location = new System.Drawing.Point(465, 591);
+            this.groupBoxToString.Location = new System.Drawing.Point(465, 421);
             this.groupBoxToString.Name = "groupBoxToString";
             this.groupBoxToString.Size = new System.Drawing.Size(355, 114);
             this.groupBoxToString.TabIndex = 30;
@@ -378,9 +386,9 @@
             this.buttonToString.BackColor = System.Drawing.Color.DarkGray;
             this.buttonToString.Enabled = false;
             this.buttonToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonToString.Location = new System.Drawing.Point(596, 504);
+            this.buttonToString.Location = new System.Drawing.Point(596, 382);
             this.buttonToString.Name = "buttonToString";
-            this.buttonToString.Size = new System.Drawing.Size(93, 59);
+            this.buttonToString.Size = new System.Drawing.Size(93, 37);
             this.buttonToString.TabIndex = 31;
             this.buttonToString.Text = "To String";
             this.buttonToString.UseVisualStyleBackColor = false;
@@ -389,7 +397,7 @@
             // textBoxAreEqualB
             // 
             this.textBoxAreEqualB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBoxAreEqualB.Location = new System.Drawing.Point(270, 852);
+            this.textBoxAreEqualB.Location = new System.Drawing.Point(270, 590);
             this.textBoxAreEqualB.Name = "textBoxAreEqualB";
             this.textBoxAreEqualB.Size = new System.Drawing.Size(122, 26);
             this.textBoxAreEqualB.TabIndex = 36;
@@ -397,7 +405,7 @@
             // textBoxAreEqualA
             // 
             this.textBoxAreEqualA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBoxAreEqualA.Location = new System.Drawing.Point(36, 852);
+            this.textBoxAreEqualA.Location = new System.Drawing.Point(36, 590);
             this.textBoxAreEqualA.Name = "textBoxAreEqualA";
             this.textBoxAreEqualA.Size = new System.Drawing.Size(122, 26);
             this.textBoxAreEqualA.TabIndex = 35;
@@ -408,7 +416,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAreEqual.AutoEllipsis = true;
             this.labelAreEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelAreEqual.Location = new System.Drawing.Point(166, 989);
+            this.labelAreEqual.Location = new System.Drawing.Point(166, 633);
             this.labelAreEqual.Name = "labelAreEqual";
             this.labelAreEqual.Size = new System.Drawing.Size(93, 31);
             this.labelAreEqual.TabIndex = 34;
@@ -419,7 +427,7 @@
             // 
             this.labelAreEqualDesc.AutoSize = true;
             this.labelAreEqualDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelAreEqualDesc.Location = new System.Drawing.Point(39, 802);
+            this.labelAreEqualDesc.Location = new System.Drawing.Point(39, 540);
             this.labelAreEqualDesc.Name = "labelAreEqualDesc";
             this.labelAreEqualDesc.Size = new System.Drawing.Size(340, 20);
             this.labelAreEqualDesc.TabIndex = 33;
@@ -429,7 +437,7 @@
             // 
             this.buttonAreEqual.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonAreEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonAreEqual.Location = new System.Drawing.Point(166, 897);
+            this.buttonAreEqual.Location = new System.Drawing.Point(166, 573);
             this.buttonAreEqual.Name = "buttonAreEqual";
             this.buttonAreEqual.Size = new System.Drawing.Size(93, 59);
             this.buttonAreEqual.TabIndex = 32;
@@ -437,11 +445,79 @@
             this.buttonAreEqual.UseVisualStyleBackColor = false;
             this.buttonAreEqual.Click += new System.EventHandler(this.buttonAreEqual_Click);
             // 
+            // labelArrayScalarDesc
+            // 
+            this.labelArrayScalarDesc.AutoSize = true;
+            this.labelArrayScalarDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelArrayScalarDesc.Location = new System.Drawing.Point(499, 573);
+            this.labelArrayScalarDesc.Name = "labelArrayScalarDesc";
+            this.labelArrayScalarDesc.Size = new System.Drawing.Size(275, 20);
+            this.labelArrayScalarDesc.TabIndex = 37;
+            this.labelArrayScalarDesc.Text = "Scalar Multiplication of array values";
+            // 
+            // numericUpDownArrayScalar
+            // 
+            this.numericUpDownArrayScalar.Enabled = false;
+            this.numericUpDownArrayScalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.numericUpDownArrayScalar.Location = new System.Drawing.Point(574, 606);
+            this.numericUpDownArrayScalar.Name = "numericUpDownArrayScalar";
+            this.numericUpDownArrayScalar.Size = new System.Drawing.Size(131, 26);
+            this.numericUpDownArrayScalar.TabIndex = 38;
+            // 
+            // buttonArrayScalar
+            // 
+            this.buttonArrayScalar.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonArrayScalar.Enabled = false;
+            this.buttonArrayScalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonArrayScalar.Location = new System.Drawing.Point(566, 644);
+            this.buttonArrayScalar.Name = "buttonArrayScalar";
+            this.buttonArrayScalar.Size = new System.Drawing.Size(144, 37);
+            this.buttonArrayScalar.TabIndex = 39;
+            this.buttonArrayScalar.Text = "Scalar Multiply";
+            this.buttonArrayScalar.UseVisualStyleBackColor = false;
+            // 
+            // buttonAddConstant
+            // 
+            this.buttonAddConstant.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonAddConstant.Enabled = false;
+            this.buttonAddConstant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonAddConstant.Location = new System.Drawing.Point(566, 791);
+            this.buttonAddConstant.Name = "buttonAddConstant";
+            this.buttonAddConstant.Size = new System.Drawing.Size(144, 37);
+            this.buttonAddConstant.TabIndex = 42;
+            this.buttonAddConstant.Text = "Add Constant";
+            this.buttonAddConstant.UseVisualStyleBackColor = false;
+            // 
+            // numericUpDownAddConstant
+            // 
+            this.numericUpDownAddConstant.Enabled = false;
+            this.numericUpDownAddConstant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.numericUpDownAddConstant.Location = new System.Drawing.Point(574, 753);
+            this.numericUpDownAddConstant.Name = "numericUpDownAddConstant";
+            this.numericUpDownAddConstant.Size = new System.Drawing.Size(131, 26);
+            this.numericUpDownAddConstant.TabIndex = 41;
+            // 
+            // labelAddConstantDesc
+            // 
+            this.labelAddConstantDesc.AutoSize = true;
+            this.labelAddConstantDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelAddConstantDesc.Location = new System.Drawing.Point(530, 720);
+            this.labelAddConstantDesc.Name = "labelAddConstantDesc";
+            this.labelAddConstantDesc.Size = new System.Drawing.Size(222, 20);
+            this.labelAddConstantDesc.TabIndex = 40;
+            this.labelAddConstantDesc.Text = "Add constant to array values";
+            // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 1061);
+            this.Controls.Add(this.buttonAddConstant);
+            this.Controls.Add(this.numericUpDownAddConstant);
+            this.Controls.Add(this.labelAddConstantDesc);
+            this.Controls.Add(this.buttonArrayScalar);
+            this.Controls.Add(this.numericUpDownArrayScalar);
+            this.Controls.Add(this.labelArrayScalarDesc);
             this.Controls.Add(this.textBoxAreEqualB);
             this.Controls.Add(this.textBoxAreEqualA);
             this.Controls.Add(this.labelAreEqual);
@@ -479,6 +555,8 @@
             this.Text = "Array of Numbers";
             this.Load += new System.EventHandler(this.FormArrayOfNumbers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownArrayScalar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAddConstant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -519,6 +597,12 @@
         private System.Windows.Forms.Label labelAreEqual;
         private System.Windows.Forms.Label labelAreEqualDesc;
         private System.Windows.Forms.Button buttonAreEqual;
+        private System.Windows.Forms.Label labelArrayScalarDesc;
+        private System.Windows.Forms.NumericUpDown numericUpDownArrayScalar;
+        private System.Windows.Forms.Button buttonArrayScalar;
+        private System.Windows.Forms.Button buttonAddConstant;
+        private System.Windows.Forms.NumericUpDown numericUpDownAddConstant;
+        private System.Windows.Forms.Label labelAddConstantDesc;
     }
 }
 
