@@ -80,7 +80,7 @@ namespace Ex3ArrayOfNumbers
 
         public string GetAverage()
         {
-            return $"{ArrayValues.Average()}";
+            return $"{Math.Round(ArrayValues.Average(), 2)}";
         }
 
         public int[] GetArray()
