@@ -14,113 +14,41 @@ namespace Ex3ArrayOfNumbers
         private int _arrayLength;
         private int[] _array;
 
-        private int _newArrayLength;
-        private int[] _newArray;
 
-        private int _arrayIndex;
-
-        
         private int ArrayLength
         {
-            set { _arrayLength = value;
-                Array.Resize(ref _array, _arrayLength);
-            }
+            set { _arrayLength = value; }
+            get { return _arrayLength; }
         }
 
         private int[] ArrayValues
         {
-            get
-            {
-                return _array; 
-            }
-            set
-            {
-                _array = value;
-            }
+            set { _array = value; }
+            get { return _array; }
         }
-
-        private int[] NewArrayValues
-        {
-            get
-            {
-                return _newArray; 
-            }
-            set
-            {
-                _newArray = value;
-            }
-        }
-
-        private int NewArrayLength
-        {
-            get { return _newArrayLength; }
-            set {  _newArrayLength = _arrayLength; }
-        }
-
-        // more accessor methods for array elements
-
-        private int ArrayIndex
-        {
-            get { return _arrayIndex;  }
-            set { _arrayIndex = value; }
-        }
-
-        // accessor methods for later use
-        private int GetArrayElement
-        {
-            get => NewArrayValues[ArrayIndex];
-        }
-
-        private int SetArrayElement
-        {
-            set
-            {
-                NewArrayValues[ArrayIndex] = value;
-                //ArrayIndex++;
-            }
-        }
-
 
 
         // constructors
         public ArrayOfNumbers(int array_length)
         {
-            ArrayLength = array_length;
+            ArrayValues = new int[array_length];
         }
 
         public ArrayOfNumbers(int[] array)
         {
-            ArrayValues = array;
-            CreateNewArray();
+            ArrayValues = new int[array.Length];
+            Array.Copy(array, ArrayValues, array.Length);
+            ArrayLength = array.Length;
         }
+
 
         // functions
-        private void CreateNewArray()
-        {
-            Array.Resize(ref _newArray, NewArrayLength);
 
-            for (int ArrayIndex= 0; ArrayIndex < NewArrayLength; ArrayIndex++)
-            {
-                NewArrayValues[ArrayIndex] = ArrayValues[ArrayIndex];
-            }
-
-        }
-
-        public void SetArrayLength(int array_length)
-        {
-            ArrayLength = array_length;
-        }
 
         public override string ToString()
         {
-            if (NewArrayValues == null || ArrayIndex == 0)
-            {
-                return string.Empty;
-            }
-            else
-            {
-                return string.Join(", ", NewArrayValues);
-            }
+            return string.Join(", ", ArrayValues);
+
         }
 
 

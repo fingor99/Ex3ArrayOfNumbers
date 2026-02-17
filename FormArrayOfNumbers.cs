@@ -121,7 +121,7 @@ namespace Ex3ArrayOfNumbers
                 textBoxInputArrayValue.Enabled = true;
 
                 //array_of_numbers.ArrayLength = arrayLength; // change
-                array_of_numbers.SetArrayLength(arrayLength);
+                array_of_numbers = new ArrayOfNumbers(arrayLength);
 
                 DisableMethodButtons();
 
@@ -212,7 +212,7 @@ namespace Ex3ArrayOfNumbers
 
             //labelArray.Text = $"{ShowArray()}";
 
-            ArrayOfNumbers array_of_numbers = new ArrayOfNumbers(arrayValues);
+            array_of_numbers = new ArrayOfNumbers(arrayValues);
 
             EnableMethodButtons();
         }
@@ -229,7 +229,7 @@ namespace Ex3ArrayOfNumbers
 
         private void buttonToString_Click(object sender, EventArgs e)
         {
-            labelArray.Text = $"{array_of_numbers.ToString()}";
+            labelArray.Text = array_of_numbers.ToString();
         }
     }
 }
