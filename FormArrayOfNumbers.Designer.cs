@@ -41,6 +41,17 @@
             this.buttonSetArray = new System.Windows.Forms.Button();
             this.labelArrayDesc = new System.Windows.Forms.Label();
             this.labelArray = new System.Windows.Forms.Label();
+            this.buttonToString = new System.Windows.Forms.Button();
+            this.buttonMax = new System.Windows.Forms.Button();
+            this.buttonGCD = new System.Windows.Forms.Button();
+            this.buttonCount = new System.Windows.Forms.Button();
+            this.buttonSum = new System.Windows.Forms.Button();
+            this.buttonAverage = new System.Windows.Forms.Button();
+            this.labelMax = new System.Windows.Forms.Label();
+            this.labelGCD = new System.Windows.Forms.Label();
+            this.labelCount = new System.Windows.Forms.Label();
+            this.labelSum = new System.Windows.Forms.Label();
+            this.labelAverage = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
             this.SuspendLayout();
             // 
@@ -169,7 +180,7 @@
             // 
             this.labelArrayDesc.AutoSize = true;
             this.labelArrayDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelArrayDesc.Location = new System.Drawing.Point(26, 218);
+            this.labelArrayDesc.Location = new System.Drawing.Point(26, 311);
             this.labelArrayDesc.Name = "labelArrayDesc";
             this.labelArrayDesc.Size = new System.Drawing.Size(54, 20);
             this.labelArrayDesc.TabIndex = 11;
@@ -180,16 +191,169 @@
             // 
             this.labelArray.AutoSize = true;
             this.labelArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelArray.Location = new System.Drawing.Point(92, 218);
+            this.labelArray.Location = new System.Drawing.Point(92, 311);
             this.labelArray.Name = "labelArray";
             this.labelArray.Size = new System.Drawing.Size(0, 20);
             this.labelArray.TabIndex = 12;
+            // 
+            // buttonToString
+            // 
+            this.buttonToString.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonToString.Enabled = false;
+            this.buttonToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonToString.Location = new System.Drawing.Point(12, 209);
+            this.buttonToString.Name = "buttonToString";
+            this.buttonToString.Size = new System.Drawing.Size(125, 59);
+            this.buttonToString.TabIndex = 13;
+            this.buttonToString.Text = "Output Array To String";
+            this.buttonToString.UseVisualStyleBackColor = false;
+            // 
+            // buttonMax
+            // 
+            this.buttonMax.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonMax.Enabled = false;
+            this.buttonMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonMax.Location = new System.Drawing.Point(18, 406);
+            this.buttonMax.Name = "buttonMax";
+            this.buttonMax.Size = new System.Drawing.Size(93, 59);
+            this.buttonMax.TabIndex = 14;
+            this.buttonMax.Text = "Max";
+            this.buttonMax.UseVisualStyleBackColor = false;
+            // 
+            // buttonGCD
+            // 
+            this.buttonGCD.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonGCD.Enabled = false;
+            this.buttonGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonGCD.Location = new System.Drawing.Point(198, 406);
+            this.buttonGCD.Name = "buttonGCD";
+            this.buttonGCD.Size = new System.Drawing.Size(93, 59);
+            this.buttonGCD.TabIndex = 15;
+            this.buttonGCD.Text = "GCD";
+            this.buttonGCD.UseVisualStyleBackColor = false;
+            // 
+            // buttonCount
+            // 
+            this.buttonCount.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonCount.Enabled = false;
+            this.buttonCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonCount.Location = new System.Drawing.Point(388, 406);
+            this.buttonCount.Name = "buttonCount";
+            this.buttonCount.Size = new System.Drawing.Size(93, 59);
+            this.buttonCount.TabIndex = 16;
+            this.buttonCount.Text = "Count";
+            this.buttonCount.UseVisualStyleBackColor = false;
+            // 
+            // buttonSum
+            // 
+            this.buttonSum.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonSum.Enabled = false;
+            this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonSum.Location = new System.Drawing.Point(569, 406);
+            this.buttonSum.Name = "buttonSum";
+            this.buttonSum.Size = new System.Drawing.Size(93, 59);
+            this.buttonSum.TabIndex = 17;
+            this.buttonSum.Text = "Sum";
+            this.buttonSum.UseVisualStyleBackColor = false;
+            // 
+            // buttonAverage
+            // 
+            this.buttonAverage.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonAverage.Enabled = false;
+            this.buttonAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonAverage.Location = new System.Drawing.Point(744, 406);
+            this.buttonAverage.Name = "buttonAverage";
+            this.buttonAverage.Size = new System.Drawing.Size(93, 59);
+            this.buttonAverage.TabIndex = 18;
+            this.buttonAverage.Text = "Average";
+            this.buttonAverage.UseVisualStyleBackColor = false;
+            // 
+            // labelMax
+            // 
+            this.labelMax.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMax.AutoEllipsis = true;
+            this.labelMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.labelMax.Location = new System.Drawing.Point(18, 499);
+            this.labelMax.Name = "labelMax";
+            this.labelMax.Size = new System.Drawing.Size(93, 28);
+            this.labelMax.TabIndex = 19;
+            this.labelMax.Text = "0";
+            this.labelMax.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelGCD
+            // 
+            this.labelGCD.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelGCD.AutoEllipsis = true;
+            this.labelGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.labelGCD.Location = new System.Drawing.Point(198, 499);
+            this.labelGCD.Name = "labelGCD";
+            this.labelGCD.Size = new System.Drawing.Size(93, 28);
+            this.labelGCD.TabIndex = 20;
+            this.labelGCD.Text = "0";
+            this.labelGCD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelCount
+            // 
+            this.labelCount.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelCount.AutoEllipsis = true;
+            this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.labelCount.Location = new System.Drawing.Point(388, 499);
+            this.labelCount.Name = "labelCount";
+            this.labelCount.Size = new System.Drawing.Size(93, 28);
+            this.labelCount.TabIndex = 21;
+            this.labelCount.Text = "0";
+            this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelSum
+            // 
+            this.labelSum.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelSum.AutoEllipsis = true;
+            this.labelSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.labelSum.Location = new System.Drawing.Point(569, 499);
+            this.labelSum.Name = "labelSum";
+            this.labelSum.Size = new System.Drawing.Size(93, 28);
+            this.labelSum.TabIndex = 22;
+            this.labelSum.Text = "0";
+            this.labelSum.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelAverage
+            // 
+            this.labelAverage.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAverage.AutoEllipsis = true;
+            this.labelAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.labelAverage.Location = new System.Drawing.Point(744, 499);
+            this.labelAverage.Name = "labelAverage";
+            this.labelAverage.Size = new System.Drawing.Size(93, 28);
+            this.labelAverage.TabIndex = 23;
+            this.labelAverage.Text = "0";
+            this.labelAverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 616);
+            this.Controls.Add(this.labelAverage);
+            this.Controls.Add(this.labelSum);
+            this.Controls.Add(this.labelCount);
+            this.Controls.Add(this.labelGCD);
+            this.Controls.Add(this.labelMax);
+            this.Controls.Add(this.buttonAverage);
+            this.Controls.Add(this.buttonSum);
+            this.Controls.Add(this.buttonCount);
+            this.Controls.Add(this.buttonGCD);
+            this.Controls.Add(this.buttonMax);
+            this.Controls.Add(this.buttonToString);
             this.Controls.Add(this.labelArray);
             this.Controls.Add(this.labelArrayDesc);
             this.Controls.Add(this.buttonSetArray);
@@ -227,6 +391,17 @@
         private System.Windows.Forms.Button buttonSetArray;
         private System.Windows.Forms.Label labelArrayDesc;
         private System.Windows.Forms.Label labelArray;
+        private System.Windows.Forms.Button buttonToString;
+        private System.Windows.Forms.Button buttonMax;
+        private System.Windows.Forms.Button buttonGCD;
+        private System.Windows.Forms.Button buttonCount;
+        private System.Windows.Forms.Button buttonSum;
+        private System.Windows.Forms.Button buttonAverage;
+        private System.Windows.Forms.Label labelMax;
+        private System.Windows.Forms.Label labelGCD;
+        private System.Windows.Forms.Label labelCount;
+        private System.Windows.Forms.Label labelSum;
+        private System.Windows.Forms.Label labelAverage;
     }
 }
 
