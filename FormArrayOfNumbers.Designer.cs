@@ -429,9 +429,9 @@
             this.labelAreEqualDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.labelAreEqualDesc.Location = new System.Drawing.Point(39, 540);
             this.labelAreEqualDesc.Name = "labelAreEqualDesc";
-            this.labelAreEqualDesc.Size = new System.Drawing.Size(340, 20);
+            this.labelAreEqualDesc.Size = new System.Drawing.Size(329, 20);
             this.labelAreEqualDesc.TabIndex = 33;
-            this.labelAreEqualDesc.Text = "Are both numbers in the fields below equal ?";
+            this.labelAreEqualDesc.Text = "Are both numbers in the fields both equal ?";
             // 
             // buttonAreEqual
             // 
