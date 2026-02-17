@@ -55,6 +55,40 @@ namespace Ex3ArrayOfNumbers
             }
         }
 
+        private void EnableMethodButtons()
+        {
+            buttonToString.Enabled = true;
+            buttonMax.Enabled = true;
+            buttonAverage.Enabled = true;
+            buttonCount.Enabled = true;
+            buttonGCD.Enabled = true;
+            buttonSum.Enabled = true;
+
+            buttonToString.BackColor = Color.LightSteelBlue;
+            buttonMax.BackColor = Color.LightSteelBlue;
+            buttonAverage.BackColor = Color.LightSteelBlue;
+            buttonCount.BackColor = Color.LightSteelBlue;
+            buttonGCD.BackColor = Color.LightSteelBlue;
+            buttonSum.BackColor = Color.LightSteelBlue;
+        }
+
+        private void DisableMethodButtons()
+        {
+            buttonToString.Enabled = false;
+            buttonMax.Enabled = false;
+            buttonAverage.Enabled = false;
+            buttonCount.Enabled = false;
+            buttonGCD.Enabled = false;
+            buttonSum.Enabled = false;
+
+            buttonToString.BackColor = Color.DarkGray;
+            buttonMax.BackColor = Color.DarkGray;
+            buttonAverage.BackColor = Color.DarkGray;
+            buttonCount.BackColor = Color.DarkGray;
+            buttonGCD.BackColor = Color.DarkGray;
+            buttonSum.BackColor = Color.DarkGray;
+        }
+
         public FormArrayOfNumbers()
         {
             InitializeComponent();
@@ -88,6 +122,8 @@ namespace Ex3ArrayOfNumbers
 
                 //array_of_numbers.ArrayLength = arrayLength; // change
                 array_of_numbers.SetArrayLength(arrayLength);
+
+                DisableMethodButtons();
 
             }
             catch (Exception ex)
@@ -177,6 +213,8 @@ namespace Ex3ArrayOfNumbers
             labelArray.Text = $"{ShowArray()}";
 
             ArrayOfNumbers array_of_numbers = new ArrayOfNumbers(arrayValues);
+
+            EnableMethodButtons();
         }
 
         private void FormArrayOfNumbers_Load(object sender, EventArgs e)
