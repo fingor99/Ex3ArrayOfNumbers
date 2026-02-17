@@ -11,6 +11,8 @@ namespace Ex3ArrayOfNumbers
     internal class ArrayOfNumbers
     {
 
+        //Accessor modifiers
+
         private int _arrayLength;
         private int[] _array;
 
@@ -48,7 +50,11 @@ namespace Ex3ArrayOfNumbers
         public override string ToString()
         {
             return string.Join(", ", ArrayValues);
+        }
 
+        public void GetMax()
+        {
+            return ToString(ArrayValues.Max());
         }
 
 
