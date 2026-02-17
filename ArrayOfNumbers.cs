@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,7 +19,7 @@ namespace Ex3ArrayOfNumbers
 
         private int _arrayIndex;
 
-        // may want to mess about with getters and setters for the accessor functions
+        
         private int ArrayLength
         {
             set { _arrayLength = value;
@@ -108,6 +109,18 @@ namespace Ex3ArrayOfNumbers
         public void SetArrayLength(int array_length)
         {
             ArrayLength = array_length;
+        }
+
+        private string override ToString()
+        {
+            if (NewArrayValues == null || ArrayIndex == 0)
+            {
+                return string.Empty;
+            }
+            else
+            {
+                return string.Join(", ", NewArrayValues);
+            }
         }
 
 
