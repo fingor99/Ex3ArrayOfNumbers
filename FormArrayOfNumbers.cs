@@ -61,14 +61,12 @@ namespace Ex3ArrayOfNumbers
             buttonMax.Enabled = true;
             buttonAverage.Enabled = true;
             buttonCount.Enabled = true;
-            buttonGCD.Enabled = true;
             buttonSum.Enabled = true;
 
             buttonToString.BackColor = Color.LightSteelBlue;
             buttonMax.BackColor = Color.LightSteelBlue;
             buttonAverage.BackColor = Color.LightSteelBlue;
             buttonCount.BackColor = Color.LightSteelBlue;
-            buttonGCD.BackColor = Color.LightSteelBlue;
             buttonSum.BackColor = Color.LightSteelBlue;
         }
 
@@ -78,15 +76,21 @@ namespace Ex3ArrayOfNumbers
             buttonMax.Enabled = false;
             buttonAverage.Enabled = false;
             buttonCount.Enabled = false;
-            buttonGCD.Enabled = false;
             buttonSum.Enabled = false;
 
             buttonToString.BackColor = Color.DarkGray;
             buttonMax.BackColor = Color.DarkGray;
             buttonAverage.BackColor = Color.DarkGray;
             buttonCount.BackColor = Color.DarkGray;
-            buttonGCD.BackColor = Color.DarkGray;
             buttonSum.BackColor = Color.DarkGray;
+        }
+
+        private void ResetArrayFields()
+        {
+            labelMax.Text = string.Empty;
+            labelAverage.Text = string.Empty;
+            labelSum.Text = string.Empty;
+            labelCount.Text = string.Empty;
         }
 
         public FormArrayOfNumbers()
@@ -119,6 +123,7 @@ namespace Ex3ArrayOfNumbers
                 buttonInputIntoArray.BackColor = Color.LightSteelBlue;
                 buttonInputIntoArray.Enabled = true;
                 textBoxInputArrayValue.Enabled = true;
+                buttonSetArray.Visible = true;
 
                 //array_of_numbers.ArrayLength = arrayLength; // change
                 array_of_numbers = new ArrayOfNumbers(arrayLength);
@@ -153,7 +158,14 @@ namespace Ex3ArrayOfNumbers
             buttonInputIntoArray.BackColor = Color.DarkGray;
             buttonInputIntoArray.Enabled = false;
             textBoxInputArrayValue.Enabled = false;
+            buttonSetArray.Visible = false;
             arrayLength = 0;
+
+            ResetArrayFields();
+            DisableMethodButtons();
+
+            labelArray.Text = string.Empty;
+
         }
 
 
@@ -198,7 +210,6 @@ namespace Ex3ArrayOfNumbers
 
         private void buttonSetArray_Click(object sender, EventArgs e)
         {
-            buttonResetArray.Visible = false;
             buttonSetArrayLength.BackColor = Color.LightSteelBlue;
             buttonSetArrayLength.Enabled = true;
             numericSetArrayLength.Enabled = true;
@@ -209,12 +220,15 @@ namespace Ex3ArrayOfNumbers
             buttonInputIntoArray.BackColor = Color.DarkGray;
             buttonInputIntoArray.Enabled = false;
             textBoxInputArrayValue.Enabled = false;
+            buttonSetArray.Visible = false;
 
             //labelArray.Text = $"{ShowArray()}";
 
             array_of_numbers = new ArrayOfNumbers(arrayValues);
 
             EnableMethodButtons();
+
+            labelArray.Text = array_of_numbers.ShowArray();
 
         }
 
@@ -230,7 +244,7 @@ namespace Ex3ArrayOfNumbers
 
         private void buttonToString_Click(object sender, EventArgs e)
         {
-            labelArray.Text = array_of_numbers.ShowArray();
+            //labelArray.Text = array_of_numbers.ShowArray();
         }
 
         private void buttonMax_Click(object sender, EventArgs e)
@@ -270,7 +284,19 @@ namespace Ex3ArrayOfNumbers
 
         private void buttonGCD_Click(object sender, EventArgs e)
         {
+            try
+            {
+                int numberA = Convert.ToInt32(textBoxGcdA.Text);
+                int numberB = Convert.ToInt32(textBoxGcdB.Text);
 
+                labelGCD.Text = $"{array_of_numbers.GetGCD(numberA, numberB)}";
+            }
+            catch
+            {
+                MessageBox.Show("Invalid inputs, please enter two whole integer numbers.");
+                textBoxGcdA.Text = " ";
+                textBoxGcdB.Text = " ";
+            }
         }
     }
 }

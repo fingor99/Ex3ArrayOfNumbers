@@ -41,7 +41,6 @@
             this.buttonSetArray = new System.Windows.Forms.Button();
             this.labelArrayDesc = new System.Windows.Forms.Label();
             this.labelArray = new System.Windows.Forms.Label();
-            this.buttonToString = new System.Windows.Forms.Button();
             this.buttonMax = new System.Windows.Forms.Button();
             this.buttonGCD = new System.Windows.Forms.Button();
             this.buttonCount = new System.Windows.Forms.Button();
@@ -55,6 +54,7 @@
             this.labelGCD = new System.Windows.Forms.Label();
             this.textBoxGcdA = new System.Windows.Forms.TextBox();
             this.textBoxGcdB = new System.Windows.Forms.TextBox();
+            this.groupBoxToString = new System.Windows.Forms.GroupBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
             this.SuspendLayout();
             // 
@@ -177,13 +177,14 @@
             this.buttonSetArray.TabIndex = 10;
             this.buttonSetArray.Text = "Set Array";
             this.buttonSetArray.UseVisualStyleBackColor = false;
+            this.buttonSetArray.Visible = false;
             this.buttonSetArray.Click += new System.EventHandler(this.buttonSetArray_Click);
             // 
             // labelArrayDesc
             // 
             this.labelArrayDesc.AutoSize = true;
             this.labelArrayDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelArrayDesc.Location = new System.Drawing.Point(26, 311);
+            this.labelArrayDesc.Location = new System.Drawing.Point(26, 234);
             this.labelArrayDesc.Name = "labelArrayDesc";
             this.labelArrayDesc.Size = new System.Drawing.Size(54, 20);
             this.labelArrayDesc.TabIndex = 11;
@@ -194,30 +195,17 @@
             // 
             this.labelArray.AutoSize = true;
             this.labelArray.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelArray.Location = new System.Drawing.Point(92, 311);
+            this.labelArray.Location = new System.Drawing.Point(92, 234);
             this.labelArray.Name = "labelArray";
             this.labelArray.Size = new System.Drawing.Size(0, 20);
             this.labelArray.TabIndex = 12;
-            // 
-            // buttonToString
-            // 
-            this.buttonToString.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonToString.Enabled = false;
-            this.buttonToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonToString.Location = new System.Drawing.Point(12, 209);
-            this.buttonToString.Name = "buttonToString";
-            this.buttonToString.Size = new System.Drawing.Size(125, 59);
-            this.buttonToString.TabIndex = 13;
-            this.buttonToString.Text = "Output Array To String";
-            this.buttonToString.UseVisualStyleBackColor = false;
-            this.buttonToString.Click += new System.EventHandler(this.buttonToString_Click);
             // 
             // buttonMax
             // 
             this.buttonMax.BackColor = System.Drawing.Color.DarkGray;
             this.buttonMax.Enabled = false;
             this.buttonMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonMax.Location = new System.Drawing.Point(105, 406);
+            this.buttonMax.Location = new System.Drawing.Point(105, 335);
             this.buttonMax.Name = "buttonMax";
             this.buttonMax.Size = new System.Drawing.Size(93, 59);
             this.buttonMax.TabIndex = 14;
@@ -227,10 +215,9 @@
             // 
             // buttonGCD
             // 
-            this.buttonGCD.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonGCD.Enabled = false;
+            this.buttonGCD.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonGCD.Location = new System.Drawing.Point(171, 681);
+            this.buttonGCD.Location = new System.Drawing.Point(171, 610);
             this.buttonGCD.Name = "buttonGCD";
             this.buttonGCD.Size = new System.Drawing.Size(93, 59);
             this.buttonGCD.TabIndex = 15;
@@ -243,7 +230,7 @@
             this.buttonCount.BackColor = System.Drawing.Color.DarkGray;
             this.buttonCount.Enabled = false;
             this.buttonCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonCount.Location = new System.Drawing.Point(288, 406);
+            this.buttonCount.Location = new System.Drawing.Point(288, 335);
             this.buttonCount.Name = "buttonCount";
             this.buttonCount.Size = new System.Drawing.Size(93, 59);
             this.buttonCount.TabIndex = 16;
@@ -256,7 +243,7 @@
             this.buttonSum.BackColor = System.Drawing.Color.DarkGray;
             this.buttonSum.Enabled = false;
             this.buttonSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonSum.Location = new System.Drawing.Point(469, 406);
+            this.buttonSum.Location = new System.Drawing.Point(469, 335);
             this.buttonSum.Name = "buttonSum";
             this.buttonSum.Size = new System.Drawing.Size(93, 59);
             this.buttonSum.TabIndex = 17;
@@ -269,7 +256,7 @@
             this.buttonAverage.BackColor = System.Drawing.Color.DarkGray;
             this.buttonAverage.Enabled = false;
             this.buttonAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonAverage.Location = new System.Drawing.Point(644, 406);
+            this.buttonAverage.Location = new System.Drawing.Point(644, 335);
             this.buttonAverage.Name = "buttonAverage";
             this.buttonAverage.Size = new System.Drawing.Size(93, 59);
             this.buttonAverage.TabIndex = 18;
@@ -283,7 +270,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelMax.AutoEllipsis = true;
             this.labelMax.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelMax.Location = new System.Drawing.Point(105, 499);
+            this.labelMax.Location = new System.Drawing.Point(105, 428);
             this.labelMax.Name = "labelMax";
             this.labelMax.Size = new System.Drawing.Size(93, 31);
             this.labelMax.TabIndex = 19;
@@ -296,7 +283,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelCount.AutoEllipsis = true;
             this.labelCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelCount.Location = new System.Drawing.Point(288, 499);
+            this.labelCount.Location = new System.Drawing.Point(288, 428);
             this.labelCount.Name = "labelCount";
             this.labelCount.Size = new System.Drawing.Size(93, 31);
             this.labelCount.TabIndex = 21;
@@ -310,7 +297,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelSum.AutoEllipsis = true;
             this.labelSum.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelSum.Location = new System.Drawing.Point(469, 499);
+            this.labelSum.Location = new System.Drawing.Point(469, 428);
             this.labelSum.Name = "labelSum";
             this.labelSum.Size = new System.Drawing.Size(93, 31);
             this.labelSum.TabIndex = 22;
@@ -323,7 +310,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelAverage.AutoEllipsis = true;
             this.labelAverage.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelAverage.Location = new System.Drawing.Point(644, 499);
+            this.labelAverage.Location = new System.Drawing.Point(644, 428);
             this.labelAverage.Name = "labelAverage";
             this.labelAverage.Size = new System.Drawing.Size(93, 31);
             this.labelAverage.TabIndex = 23;
@@ -334,7 +321,7 @@
             // 
             this.labelGCDDesc.AutoSize = true;
             this.labelGCDDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.labelGCDDesc.Location = new System.Drawing.Point(37, 586);
+            this.labelGCDDesc.Location = new System.Drawing.Point(37, 515);
             this.labelGCDDesc.Name = "labelGCDDesc";
             this.labelGCDDesc.Size = new System.Drawing.Size(371, 20);
             this.labelGCDDesc.TabIndex = 26;
@@ -346,7 +333,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelGCD.AutoEllipsis = true;
             this.labelGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelGCD.Location = new System.Drawing.Point(171, 773);
+            this.labelGCD.Location = new System.Drawing.Point(171, 702);
             this.labelGCD.Name = "labelGCD";
             this.labelGCD.Size = new System.Drawing.Size(93, 31);
             this.labelGCD.TabIndex = 27;
@@ -355,27 +342,37 @@
             // 
             // textBoxGcdA
             // 
-            this.textBoxGcdA.Enabled = false;
             this.textBoxGcdA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBoxGcdA.Location = new System.Drawing.Point(41, 636);
+            this.textBoxGcdA.Location = new System.Drawing.Point(41, 565);
             this.textBoxGcdA.Name = "textBoxGcdA";
             this.textBoxGcdA.Size = new System.Drawing.Size(122, 26);
             this.textBoxGcdA.TabIndex = 28;
             // 
             // textBoxGcdB
             // 
-            this.textBoxGcdB.Enabled = false;
             this.textBoxGcdB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.textBoxGcdB.Location = new System.Drawing.Point(275, 636);
+            this.textBoxGcdB.Location = new System.Drawing.Point(275, 565);
             this.textBoxGcdB.Name = "textBoxGcdB";
             this.textBoxGcdB.Size = new System.Drawing.Size(122, 26);
             this.textBoxGcdB.TabIndex = 29;
+            // 
+            // groupBoxToString
+            // 
+            this.groupBoxToString.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBoxToString.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.groupBoxToString.Location = new System.Drawing.Point(465, 515);
+            this.groupBoxToString.Name = "groupBoxToString";
+            this.groupBoxToString.Size = new System.Drawing.Size(355, 190);
+            this.groupBoxToString.TabIndex = 30;
+            this.groupBoxToString.TabStop = false;
             // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 876);
+            this.Controls.Add(this.groupBoxToString);
             this.Controls.Add(this.textBoxGcdB);
             this.Controls.Add(this.textBoxGcdA);
             this.Controls.Add(this.labelGCD);
@@ -389,7 +386,6 @@
             this.Controls.Add(this.buttonCount);
             this.Controls.Add(this.buttonGCD);
             this.Controls.Add(this.buttonMax);
-            this.Controls.Add(this.buttonToString);
             this.Controls.Add(this.labelArray);
             this.Controls.Add(this.labelArrayDesc);
             this.Controls.Add(this.buttonSetArray);
@@ -427,7 +423,6 @@
         private System.Windows.Forms.Button buttonSetArray;
         private System.Windows.Forms.Label labelArrayDesc;
         private System.Windows.Forms.Label labelArray;
-        private System.Windows.Forms.Button buttonToString;
         private System.Windows.Forms.Button buttonMax;
         private System.Windows.Forms.Button buttonGCD;
         private System.Windows.Forms.Button buttonCount;
@@ -441,6 +436,7 @@
         private System.Windows.Forms.Label labelGCD;
         private System.Windows.Forms.TextBox textBoxGcdA;
         private System.Windows.Forms.TextBox textBoxGcdB;
+        private System.Windows.Forms.GroupBox groupBoxToString;
     }
 }
 
