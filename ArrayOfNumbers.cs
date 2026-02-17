@@ -77,6 +77,11 @@ namespace Ex3ArrayOfNumbers
             return $"{ArrayValues.Average()}";
         }
 
+        public int[] GetArray()
+        {
+            return ArrayValues;
+        }
+
 
     }
 }
