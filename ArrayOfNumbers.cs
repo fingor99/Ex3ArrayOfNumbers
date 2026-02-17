@@ -65,8 +65,6 @@ namespace Ex3ArrayOfNumbers
         public string GetCount()
         {
             return $"{ArrayValues.Count()}";
-            //int ArrayCount = ArrayValues.Length;
-            //return $"{ArrayCount}";
         }
 
 

@@ -258,6 +258,7 @@
             this.buttonSum.TabIndex = 17;
             this.buttonSum.Text = "Sum";
             this.buttonSum.UseVisualStyleBackColor = false;
+            this.buttonSum.Click += new System.EventHandler(this.buttonSum_Click);
             // 
             // buttonAverage
             // 

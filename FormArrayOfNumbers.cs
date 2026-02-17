@@ -246,5 +246,10 @@ namespace Ex3ArrayOfNumbers
         {
             labelCount.Text = $"{array_of_numbers.GetCount()}";
         }
+
+        private void buttonSum_Click(object sender, EventArgs e)
+        {
+            labelSum.Text = $"{array_of_numbers.GetSum()}";
+        }
     }
 }
