@@ -245,6 +245,7 @@
             this.buttonCount.TabIndex = 16;
             this.buttonCount.Text = "Count";
             this.buttonCount.UseVisualStyleBackColor = false;
+            this.buttonCount.Click += new System.EventHandler(this.buttonCount_Click);
             // 
             // buttonSum
             // 
@@ -311,6 +312,7 @@
             this.labelCount.TabIndex = 21;
             this.labelCount.Text = "0";
             this.labelCount.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelCount.Click += new System.EventHandler(this.labelCount_Click);
             // 
             // labelSum
             // 
