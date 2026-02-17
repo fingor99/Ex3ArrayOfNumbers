@@ -236,5 +236,25 @@ namespace Ex3ArrayOfNumbers
         {
             labelMax.Text = $"{array_of_numbers.GetMax()}";
         }
+
+        private void labelCount_Click(object sender, EventArgs e)
+        {
+          
+        }
+
+        private void buttonCount_Click(object sender, EventArgs e)
+        {
+            labelCount.Text = $"{array_of_numbers.GetCount()}";
+        }
+
+        private void buttonSum_Click(object sender, EventArgs e)
+        {
+            labelSum.Text = $"{array_of_numbers.GetSum()}";
+        }
+
+        private void buttonAverage_Click(object sender, EventArgs e)
+        {
+            labelAverage.Text = $"{array_of_numbers.GetAverage()}";
+        }
     }
 }
