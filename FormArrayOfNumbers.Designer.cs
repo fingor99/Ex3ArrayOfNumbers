@@ -51,13 +51,13 @@
             this.labelCount = new System.Windows.Forms.Label();
             this.labelSum = new System.Windows.Forms.Label();
             this.labelAverage = new System.Windows.Forms.Label();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
+            this.numericUpDownGCDa = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDownGCDb = new System.Windows.Forms.NumericUpDown();
+            this.labelGCDDesc = new System.Windows.Forms.Label();
+            this.labelGCD = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGCDa)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGCDb)).BeginInit();
             this.SuspendLayout();
             // 
             // labelInputArrayDesc
@@ -331,54 +331,54 @@
             this.labelAverage.Text = "0";
             this.labelAverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numericUpDown1
+            // numericUpDownGCDa
             // 
-            this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.numericUpDown1.Location = new System.Drawing.Point(41, 638);
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(131, 26);
-            this.numericUpDown1.TabIndex = 24;
+            this.numericUpDownGCDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.numericUpDownGCDa.Location = new System.Drawing.Point(41, 638);
+            this.numericUpDownGCDa.Name = "numericUpDownGCDa";
+            this.numericUpDownGCDa.Size = new System.Drawing.Size(131, 26);
+            this.numericUpDownGCDa.TabIndex = 24;
             // 
-            // numericUpDown2
+            // numericUpDownGCDb
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.numericUpDown2.Location = new System.Drawing.Point(226, 638);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(131, 26);
-            this.numericUpDown2.TabIndex = 25;
+            this.numericUpDownGCDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.numericUpDownGCDb.Location = new System.Drawing.Point(226, 638);
+            this.numericUpDownGCDb.Name = "numericUpDownGCDb";
+            this.numericUpDownGCDb.Size = new System.Drawing.Size(131, 26);
+            this.numericUpDownGCDb.TabIndex = 25;
             // 
-            // label2
+            // labelGCDDesc
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.label2.Location = new System.Drawing.Point(37, 586);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(340, 20);
-            this.label2.TabIndex = 26;
-            this.label2.Text = "Find the GCD of two numbers in your array :";
+            this.labelGCDDesc.AutoSize = true;
+            this.labelGCDDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelGCDDesc.Location = new System.Drawing.Point(37, 586);
+            this.labelGCDDesc.Name = "labelGCDDesc";
+            this.labelGCDDesc.Size = new System.Drawing.Size(340, 20);
+            this.labelGCDDesc.TabIndex = 26;
+            this.labelGCDDesc.Text = "Find the GCD of two numbers in your array :";
             // 
-            // label3
+            // labelGCD
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.labelGCD.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.AutoEllipsis = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.label3.Location = new System.Drawing.Point(145, 793);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(93, 31);
-            this.label3.TabIndex = 27;
-            this.label3.Text = "0";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelGCD.AutoEllipsis = true;
+            this.labelGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.labelGCD.Location = new System.Drawing.Point(145, 793);
+            this.labelGCD.Name = "labelGCD";
+            this.labelGCD.Size = new System.Drawing.Size(93, 31);
+            this.labelGCD.TabIndex = 27;
+            this.labelGCD.Text = "0";
+            this.labelGCD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 876);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.numericUpDown2);
-            this.Controls.Add(this.numericUpDown1);
+            this.Controls.Add(this.labelGCD);
+            this.Controls.Add(this.labelGCDDesc);
+            this.Controls.Add(this.numericUpDownGCDb);
+            this.Controls.Add(this.numericUpDownGCDa);
             this.Controls.Add(this.labelAverage);
             this.Controls.Add(this.labelSum);
             this.Controls.Add(this.labelCount);
@@ -406,8 +406,8 @@
             this.Text = "Array of Numbers";
             this.Load += new System.EventHandler(this.FormArrayOfNumbers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGCDa)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGCDb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -438,10 +438,10 @@
         private System.Windows.Forms.Label labelCount;
         private System.Windows.Forms.Label labelSum;
         private System.Windows.Forms.Label labelAverage;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
-        private System.Windows.Forms.NumericUpDown numericUpDown2;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.NumericUpDown numericUpDownGCDa;
+        private System.Windows.Forms.NumericUpDown numericUpDownGCDb;
+        private System.Windows.Forms.Label labelGCDDesc;
+        private System.Windows.Forms.Label labelGCD;
     }
 }
 
