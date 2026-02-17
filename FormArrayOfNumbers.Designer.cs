@@ -56,6 +56,11 @@
             this.textBoxGcdB = new System.Windows.Forms.TextBox();
             this.groupBoxToString = new System.Windows.Forms.GroupBox();
             this.buttonToString = new System.Windows.Forms.Button();
+            this.textBoxAreEqualB = new System.Windows.Forms.TextBox();
+            this.textBoxAreEqualA = new System.Windows.Forms.TextBox();
+            this.labelAreEqual = new System.Windows.Forms.Label();
+            this.labelAreEqualDesc = new System.Windows.Forms.Label();
+            this.buttonAreEqual = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
             this.SuspendLayout();
             // 
@@ -381,11 +386,66 @@
             this.buttonToString.UseVisualStyleBackColor = false;
             this.buttonToString.Click += new System.EventHandler(this.buttonToString_Click_1);
             // 
+            // textBoxAreEqualB
+            // 
+            this.textBoxAreEqualB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.textBoxAreEqualB.Location = new System.Drawing.Point(270, 852);
+            this.textBoxAreEqualB.Name = "textBoxAreEqualB";
+            this.textBoxAreEqualB.Size = new System.Drawing.Size(122, 26);
+            this.textBoxAreEqualB.TabIndex = 36;
+            // 
+            // textBoxAreEqualA
+            // 
+            this.textBoxAreEqualA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.textBoxAreEqualA.Location = new System.Drawing.Point(36, 852);
+            this.textBoxAreEqualA.Name = "textBoxAreEqualA";
+            this.textBoxAreEqualA.Size = new System.Drawing.Size(122, 26);
+            this.textBoxAreEqualA.TabIndex = 35;
+            // 
+            // labelAreEqual
+            // 
+            this.labelAreEqual.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelAreEqual.AutoEllipsis = true;
+            this.labelAreEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
+            this.labelAreEqual.Location = new System.Drawing.Point(166, 989);
+            this.labelAreEqual.Name = "labelAreEqual";
+            this.labelAreEqual.Size = new System.Drawing.Size(93, 31);
+            this.labelAreEqual.TabIndex = 34;
+            this.labelAreEqual.Text = "?";
+            this.labelAreEqual.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // labelAreEqualDesc
+            // 
+            this.labelAreEqualDesc.AutoSize = true;
+            this.labelAreEqualDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelAreEqualDesc.Location = new System.Drawing.Point(39, 802);
+            this.labelAreEqualDesc.Name = "labelAreEqualDesc";
+            this.labelAreEqualDesc.Size = new System.Drawing.Size(340, 20);
+            this.labelAreEqualDesc.TabIndex = 33;
+            this.labelAreEqualDesc.Text = "Are both numbers in the fields below equal ?";
+            // 
+            // buttonAreEqual
+            // 
+            this.buttonAreEqual.BackColor = System.Drawing.Color.LightSteelBlue;
+            this.buttonAreEqual.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonAreEqual.Location = new System.Drawing.Point(166, 897);
+            this.buttonAreEqual.Name = "buttonAreEqual";
+            this.buttonAreEqual.Size = new System.Drawing.Size(93, 59);
+            this.buttonAreEqual.TabIndex = 32;
+            this.buttonAreEqual.Text = "Check";
+            this.buttonAreEqual.UseVisualStyleBackColor = false;
+            // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(860, 876);
+            this.ClientSize = new System.Drawing.Size(860, 1061);
+            this.Controls.Add(this.textBoxAreEqualB);
+            this.Controls.Add(this.textBoxAreEqualA);
+            this.Controls.Add(this.labelAreEqual);
+            this.Controls.Add(this.labelAreEqualDesc);
+            this.Controls.Add(this.buttonAreEqual);
             this.Controls.Add(this.buttonToString);
             this.Controls.Add(this.groupBoxToString);
             this.Controls.Add(this.textBoxGcdB);
@@ -453,6 +513,11 @@
         private System.Windows.Forms.TextBox textBoxGcdB;
         private System.Windows.Forms.GroupBox groupBoxToString;
         private System.Windows.Forms.Button buttonToString;
+        private System.Windows.Forms.TextBox textBoxAreEqualB;
+        private System.Windows.Forms.TextBox textBoxAreEqualA;
+        private System.Windows.Forms.Label labelAreEqual;
+        private System.Windows.Forms.Label labelAreEqualDesc;
+        private System.Windows.Forms.Button buttonAreEqual;
     }
 }
 
