@@ -177,6 +177,7 @@
             this.buttonSetArray.TabIndex = 10;
             this.buttonSetArray.Text = "Set Array";
             this.buttonSetArray.UseVisualStyleBackColor = false;
+            this.buttonSetArray.Visible = false;
             this.buttonSetArray.Click += new System.EventHandler(this.buttonSetArray_Click);
             // 
             // labelArrayDesc
@@ -227,8 +228,7 @@
             // 
             // buttonGCD
             // 
-            this.buttonGCD.BackColor = System.Drawing.Color.DarkGray;
-            this.buttonGCD.Enabled = false;
+            this.buttonGCD.BackColor = System.Drawing.Color.LightSteelBlue;
             this.buttonGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.buttonGCD.Location = new System.Drawing.Point(171, 681);
             this.buttonGCD.Name = "buttonGCD";
@@ -355,7 +355,6 @@
             // 
             // textBoxGcdA
             // 
-            this.textBoxGcdA.Enabled = false;
             this.textBoxGcdA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBoxGcdA.Location = new System.Drawing.Point(41, 636);
             this.textBoxGcdA.Name = "textBoxGcdA";
@@ -364,7 +363,6 @@
             // 
             // textBoxGcdB
             // 
-            this.textBoxGcdB.Enabled = false;
             this.textBoxGcdB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
             this.textBoxGcdB.Location = new System.Drawing.Point(275, 636);
             this.textBoxGcdB.Name = "textBoxGcdB";
