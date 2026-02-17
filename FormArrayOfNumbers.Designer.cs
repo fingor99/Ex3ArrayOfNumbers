@@ -61,7 +61,15 @@
             this.labelAreEqual = new System.Windows.Forms.Label();
             this.labelAreEqualDesc = new System.Windows.Forms.Label();
             this.buttonAreEqual = new System.Windows.Forms.Button();
+            this.labelArrayScalarDesc = new System.Windows.Forms.Label();
+            this.numericUpDownArrayScalar = new System.Windows.Forms.NumericUpDown();
+            this.buttonArrayScalar = new System.Windows.Forms.Button();
+            this.buttonAddConstant = new System.Windows.Forms.Button();
+            this.numericUpDownAddConstant = new System.Windows.Forms.NumericUpDown();
+            this.labelAddConstantDesc = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownArrayScalar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAddConstant)).BeginInit();
             this.SuspendLayout();
             // 
             // labelInputArrayDesc
@@ -436,11 +444,79 @@
             this.buttonAreEqual.Text = "Check";
             this.buttonAreEqual.UseVisualStyleBackColor = false;
             // 
+            // labelArrayScalarDesc
+            // 
+            this.labelArrayScalarDesc.AutoSize = true;
+            this.labelArrayScalarDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelArrayScalarDesc.Location = new System.Drawing.Point(499, 573);
+            this.labelArrayScalarDesc.Name = "labelArrayScalarDesc";
+            this.labelArrayScalarDesc.Size = new System.Drawing.Size(275, 20);
+            this.labelArrayScalarDesc.TabIndex = 37;
+            this.labelArrayScalarDesc.Text = "Scalar Multiplication of array values";
+            // 
+            // numericUpDownArrayScalar
+            // 
+            this.numericUpDownArrayScalar.Enabled = false;
+            this.numericUpDownArrayScalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.numericUpDownArrayScalar.Location = new System.Drawing.Point(574, 606);
+            this.numericUpDownArrayScalar.Name = "numericUpDownArrayScalar";
+            this.numericUpDownArrayScalar.Size = new System.Drawing.Size(131, 26);
+            this.numericUpDownArrayScalar.TabIndex = 38;
+            // 
+            // buttonArrayScalar
+            // 
+            this.buttonArrayScalar.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonArrayScalar.Enabled = false;
+            this.buttonArrayScalar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonArrayScalar.Location = new System.Drawing.Point(566, 644);
+            this.buttonArrayScalar.Name = "buttonArrayScalar";
+            this.buttonArrayScalar.Size = new System.Drawing.Size(144, 37);
+            this.buttonArrayScalar.TabIndex = 39;
+            this.buttonArrayScalar.Text = "Scalar Multiply";
+            this.buttonArrayScalar.UseVisualStyleBackColor = false;
+            // 
+            // buttonAddConstant
+            // 
+            this.buttonAddConstant.BackColor = System.Drawing.Color.DarkGray;
+            this.buttonAddConstant.Enabled = false;
+            this.buttonAddConstant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.buttonAddConstant.Location = new System.Drawing.Point(566, 791);
+            this.buttonAddConstant.Name = "buttonAddConstant";
+            this.buttonAddConstant.Size = new System.Drawing.Size(144, 37);
+            this.buttonAddConstant.TabIndex = 42;
+            this.buttonAddConstant.Text = "Add Constant";
+            this.buttonAddConstant.UseVisualStyleBackColor = false;
+            // 
+            // numericUpDownAddConstant
+            // 
+            this.numericUpDownAddConstant.Enabled = false;
+            this.numericUpDownAddConstant.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.numericUpDownAddConstant.Location = new System.Drawing.Point(574, 753);
+            this.numericUpDownAddConstant.Name = "numericUpDownAddConstant";
+            this.numericUpDownAddConstant.Size = new System.Drawing.Size(131, 26);
+            this.numericUpDownAddConstant.TabIndex = 41;
+            // 
+            // labelAddConstantDesc
+            // 
+            this.labelAddConstantDesc.AutoSize = true;
+            this.labelAddConstantDesc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.labelAddConstantDesc.Location = new System.Drawing.Point(530, 720);
+            this.labelAddConstantDesc.Name = "labelAddConstantDesc";
+            this.labelAddConstantDesc.Size = new System.Drawing.Size(222, 20);
+            this.labelAddConstantDesc.TabIndex = 40;
+            this.labelAddConstantDesc.Text = "Add constant to array values";
+            // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 1061);
+            this.Controls.Add(this.buttonAddConstant);
+            this.Controls.Add(this.numericUpDownAddConstant);
+            this.Controls.Add(this.labelAddConstantDesc);
+            this.Controls.Add(this.buttonArrayScalar);
+            this.Controls.Add(this.numericUpDownArrayScalar);
+            this.Controls.Add(this.labelArrayScalarDesc);
             this.Controls.Add(this.textBoxAreEqualB);
             this.Controls.Add(this.textBoxAreEqualA);
             this.Controls.Add(this.labelAreEqual);
@@ -478,6 +554,8 @@
             this.Text = "Array of Numbers";
             this.Load += new System.EventHandler(this.FormArrayOfNumbers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownArrayScalar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownAddConstant)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -518,6 +596,12 @@
         private System.Windows.Forms.Label labelAreEqual;
         private System.Windows.Forms.Label labelAreEqualDesc;
         private System.Windows.Forms.Button buttonAreEqual;
+        private System.Windows.Forms.Label labelArrayScalarDesc;
+        private System.Windows.Forms.NumericUpDown numericUpDownArrayScalar;
+        private System.Windows.Forms.Button buttonArrayScalar;
+        private System.Windows.Forms.Button buttonAddConstant;
+        private System.Windows.Forms.NumericUpDown numericUpDownAddConstant;
+        private System.Windows.Forms.Label labelAddConstantDesc;
     }
 }
 
