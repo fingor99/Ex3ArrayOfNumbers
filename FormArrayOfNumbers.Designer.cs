@@ -51,13 +51,11 @@
             this.labelCount = new System.Windows.Forms.Label();
             this.labelSum = new System.Windows.Forms.Label();
             this.labelAverage = new System.Windows.Forms.Label();
-            this.numericUpDownGCDa = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDownGCDb = new System.Windows.Forms.NumericUpDown();
             this.labelGCDDesc = new System.Windows.Forms.Label();
             this.labelGCD = new System.Windows.Forms.Label();
+            this.textBoxGcdA = new System.Windows.Forms.TextBox();
+            this.textBoxGcdB = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGCDa)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGCDb)).BeginInit();
             this.SuspendLayout();
             // 
             // labelInputArrayDesc
@@ -232,12 +230,13 @@
             this.buttonGCD.BackColor = System.Drawing.Color.DarkGray;
             this.buttonGCD.Enabled = false;
             this.buttonGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.buttonGCD.Location = new System.Drawing.Point(165, 701);
+            this.buttonGCD.Location = new System.Drawing.Point(171, 681);
             this.buttonGCD.Name = "buttonGCD";
             this.buttonGCD.Size = new System.Drawing.Size(93, 59);
             this.buttonGCD.TabIndex = 15;
             this.buttonGCD.Text = "Get GCD";
             this.buttonGCD.UseVisualStyleBackColor = false;
+            this.buttonGCD.Click += new System.EventHandler(this.buttonGCD_Click);
             // 
             // buttonCount
             // 
@@ -331,26 +330,6 @@
             this.labelAverage.Text = "0";
             this.labelAverage.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // numericUpDownGCDa
-            // 
-            this.numericUpDownGCDa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.numericUpDownGCDa.Location = new System.Drawing.Point(61, 638);
-            this.numericUpDownGCDa.Name = "numericUpDownGCDa";
-            this.numericUpDownGCDa.ReadOnly = true;
-            this.numericUpDownGCDa.Size = new System.Drawing.Size(131, 26);
-            this.numericUpDownGCDa.TabIndex = 24;
-            this.numericUpDownGCDa.KeyDown += new System.Windows.Forms.KeyEventHandler(this.numericUpDownGCDa_KeyDown);
-            this.numericUpDownGCDa.KeyUp += new System.Windows.Forms.KeyEventHandler(this.numericUpDownGCDa_KeyUp);
-            // 
-            // numericUpDownGCDb
-            // 
-            this.numericUpDownGCDb.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
-            this.numericUpDownGCDb.Location = new System.Drawing.Point(246, 638);
-            this.numericUpDownGCDb.Name = "numericUpDownGCDb";
-            this.numericUpDownGCDb.ReadOnly = true;
-            this.numericUpDownGCDb.Size = new System.Drawing.Size(131, 26);
-            this.numericUpDownGCDb.TabIndex = 25;
-            // 
             // labelGCDDesc
             // 
             this.labelGCDDesc.AutoSize = true;
@@ -367,22 +346,40 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.labelGCD.AutoEllipsis = true;
             this.labelGCD.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.25F);
-            this.labelGCD.Location = new System.Drawing.Point(165, 793);
+            this.labelGCD.Location = new System.Drawing.Point(171, 773);
             this.labelGCD.Name = "labelGCD";
             this.labelGCD.Size = new System.Drawing.Size(93, 31);
             this.labelGCD.TabIndex = 27;
             this.labelGCD.Text = "0";
             this.labelGCD.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // textBoxGcdA
+            // 
+            this.textBoxGcdA.Enabled = false;
+            this.textBoxGcdA.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.textBoxGcdA.Location = new System.Drawing.Point(41, 636);
+            this.textBoxGcdA.Name = "textBoxGcdA";
+            this.textBoxGcdA.Size = new System.Drawing.Size(122, 26);
+            this.textBoxGcdA.TabIndex = 28;
+            // 
+            // textBoxGcdB
+            // 
+            this.textBoxGcdB.Enabled = false;
+            this.textBoxGcdB.Font = new System.Drawing.Font("Microsoft Sans Serif", 12.25F);
+            this.textBoxGcdB.Location = new System.Drawing.Point(275, 636);
+            this.textBoxGcdB.Name = "textBoxGcdB";
+            this.textBoxGcdB.Size = new System.Drawing.Size(122, 26);
+            this.textBoxGcdB.TabIndex = 29;
+            // 
             // FormArrayOfNumbers
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(860, 876);
+            this.Controls.Add(this.textBoxGcdB);
+            this.Controls.Add(this.textBoxGcdA);
             this.Controls.Add(this.labelGCD);
             this.Controls.Add(this.labelGCDDesc);
-            this.Controls.Add(this.numericUpDownGCDb);
-            this.Controls.Add(this.numericUpDownGCDa);
             this.Controls.Add(this.labelAverage);
             this.Controls.Add(this.labelSum);
             this.Controls.Add(this.labelCount);
@@ -410,8 +407,6 @@
             this.Text = "Array of Numbers";
             this.Load += new System.EventHandler(this.FormArrayOfNumbers_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericSetArrayLength)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGCDa)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDownGCDb)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -442,10 +437,10 @@
         private System.Windows.Forms.Label labelCount;
         private System.Windows.Forms.Label labelSum;
         private System.Windows.Forms.Label labelAverage;
-        private System.Windows.Forms.NumericUpDown numericUpDownGCDa;
-        private System.Windows.Forms.NumericUpDown numericUpDownGCDb;
         private System.Windows.Forms.Label labelGCDDesc;
         private System.Windows.Forms.Label labelGCD;
+        private System.Windows.Forms.TextBox textBoxGcdA;
+        private System.Windows.Forms.TextBox textBoxGcdB;
     }
 }
 

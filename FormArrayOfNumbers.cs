@@ -267,5 +267,10 @@ namespace Ex3ArrayOfNumbers
         {
 
         }
+
+        private void buttonGCD_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
