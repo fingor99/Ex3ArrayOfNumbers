@@ -43,6 +43,11 @@ namespace Ex3ArrayOfNumbers
             }
         }
 
+        private void ResetArray()
+        {
+            arrayValues = new int[0];
+        }
+
         private string ShowArray()
         {
             if (arrayValues == null || arrayIndex == 0)
@@ -125,7 +130,6 @@ namespace Ex3ArrayOfNumbers
                 textBoxInputArrayValue.Enabled = true;
                 buttonSetArray.Visible = true;
 
-                //array_of_numbers.ArrayLength = arrayLength; // change
                 array_of_numbers = new ArrayOfNumbers(arrayLength);
 
                 DisableMethodButtons();
@@ -160,9 +164,11 @@ namespace Ex3ArrayOfNumbers
             textBoxInputArrayValue.Enabled = false;
             buttonSetArray.Visible = false;
             arrayLength = 0;
+            groupBoxToString.Text = String.Empty;
 
             ResetArrayFields();
             DisableMethodButtons();
+            ResetArray();
 
             labelArray.Text = string.Empty;
 
@@ -194,6 +200,7 @@ namespace Ex3ArrayOfNumbers
                 labelArrayAmountInput.Text = arrayIndex.ToString();
                 CheckIfArrayFull();
 
+
             }
 
             catch (Exception ex)
@@ -210,9 +217,6 @@ namespace Ex3ArrayOfNumbers
 
         private void buttonSetArray_Click(object sender, EventArgs e)
         {
-            buttonSetArrayLength.BackColor = Color.LightSteelBlue;
-            buttonSetArrayLength.Enabled = true;
-            numericSetArrayLength.Enabled = true;
             numericSetArrayLength.Value = 0;
             textBoxInputArrayValue.Text = "";
             arrayCounterReady = false;
@@ -221,8 +225,6 @@ namespace Ex3ArrayOfNumbers
             buttonInputIntoArray.Enabled = false;
             textBoxInputArrayValue.Enabled = false;
             buttonSetArray.Visible = false;
-
-            //labelArray.Text = $"{ShowArray()}";
 
             array_of_numbers = new ArrayOfNumbers(arrayValues);
 
