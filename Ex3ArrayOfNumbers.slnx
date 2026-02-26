@@ -1,3 +1,4 @@
 <Solution>
+  <Project Path="../ArrayOfNumbers.Tests/Ex3ArrayOfNumbers.Tests.csproj" Id="69282884-c304-42a5-ac75-6e0cebe47a6c" />
   <Project Path="Ex3ArrayOfNumbers.csproj" Id="e6910b46-4f47-4151-be34-a1b64ce06f32" />
 </Solution>

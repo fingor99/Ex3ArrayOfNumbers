@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace Ex3ArrayOfNumbers
 {
-    internal class ArrayOfNumbers
+    public class ArrayOfNumbers
     {
         // Fields
 
@@ -145,15 +145,16 @@ namespace Ex3ArrayOfNumbers
         } // end of getGCD function
 
         // Checks if two numbers passed in as arguments are equal, returns yes or no in string
-        public string AreEqual(int num_a, int num_b)
+        public bool AreEqual(int num_a, int num_b)
         {
             if (num_a == num_b)
             {
-                return "Yes";
+                //return "Yes";
+                return true;
             }
             else
             {
-                return "No";
+                return false;
             }
         }
 

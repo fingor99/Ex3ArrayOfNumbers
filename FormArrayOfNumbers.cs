@@ -358,7 +358,15 @@ namespace Ex3ArrayOfNumbers
                 int numberA = Convert.ToInt32(textBoxAreEqualA.Text);
                 int numberB = Convert.ToInt32(textBoxAreEqualB.Text);
 
-                labelAreEqual.Text = array_of_numbers.AreEqual(numberA, numberB);
+                if (array_of_numbers.AreEqual(numberA, numberB) == true)
+                {
+                    labelAreEqual.Text = "Yes";
+                } else
+                {
+                    labelAreEqual.Text = "No";
+                }
+
+                //labelAreEqual.Text = array_of_numbers.AreEqual(numberA, numberB);
             }
             catch
             {
