@@ -103,7 +103,7 @@ namespace Ex3ArrayOfNumbers
 
                 if (arrayLength == 0)
                 {
-                    MessageBox.Show("Please input a value more than 0");
+                    MessageBox.Show("Please input a value more than 0", "Error");
                     return;
                 }
 
@@ -128,7 +128,7 @@ namespace Ex3ArrayOfNumbers
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Invalid input, please input a positive, whole integer");
+                MessageBox.Show("Error", "Invalid input, please input a positive, whole integer");
                 return;
             }
 
